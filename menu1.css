@@ -3,41 +3,7 @@ body {
     margin: 0;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 20%;
-    background-color: rgba(221, 252, 223, 0.788);
-    height: 100%; /*full height*/
-    position: fixed;
-    overflow: auto;
-  }
-
 .buttons {
     text-align: center;
-    margin-left: 15%;
 }
 
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-  }
-
-/* Change the link color on hover */
-li a:hover {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-  .active {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-.menuBar {
-    background-color: #067c51;
-    color: rgb(238, 255, 221);
-}
