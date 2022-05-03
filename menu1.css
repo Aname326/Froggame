@@ -4,9 +4,19 @@ body {
 }
 
 .buttons {
-    text-align: center;
+  text-align: center;
 }
 
 .chapter2block {
   opacity: 0.5;
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+  height: 240px;
+  width: 1010px;
+  transition-duration: .60s;
 }
