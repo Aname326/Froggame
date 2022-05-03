@@ -20,3 +20,14 @@ body {
   width: 1010px;
   transition-duration: .60s;
 }
+
+.chapter1 {
+  background: url(chapter1block.jpeg);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+  height: 240px;
+  width: 1010px;
+}
