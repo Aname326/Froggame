@@ -7,8 +7,16 @@ body {
   text-align: center;
 }
 
-.chapter2block {
+.chapter2 {
   opacity: 0.5;
+  background: url(chapter2block.jpeg);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+  height: 240px;
+  width: 1010px;
 }
 
 .button {
@@ -22,6 +30,11 @@ body {
 }
 
 .chapter1:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
+.chapter2:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
   transform: scale(.95);
 }
