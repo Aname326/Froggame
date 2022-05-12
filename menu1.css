@@ -8,7 +8,6 @@ body {
 }
 
 .chapter2 {
-  opacity: 0.5;
   background: url(chapter2block.jpeg);
   background-size: cover;
   margin: 0;
