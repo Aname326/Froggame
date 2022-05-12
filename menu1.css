@@ -28,6 +28,11 @@ body {
   transform: scale(.95);
 }
 
+.chapter3:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
 .chapter1 {
   background: url(chapter1block.jpeg);
   background-size: cover;
