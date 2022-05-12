@@ -33,6 +33,41 @@ body {
   transform: scale(.95);
 }
 
+.chapter4:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
+.chapter5:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
+.chapter6:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
+.chapter7:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
+.chapter8:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
+.chapter9:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
+.chapter10:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+}
+
 .chapter1 {
   background: url(chapter1block.jpeg);
   background-size: cover;
