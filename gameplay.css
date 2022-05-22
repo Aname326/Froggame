@@ -9,6 +9,7 @@ body {
 
 .returnbutton {
     text-align: left;
+    float: left;
     margin: 0;
     border: 0;
 }
