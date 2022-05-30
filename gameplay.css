@@ -15,9 +15,10 @@ body {
 }
 
 .pleasantratebar {
-    text-align: center;
     margin: 0;
     border: 0;
+    float: right;
+    margin-right: 5%;
 }
 
 .buttonreturn {
