@@ -1,11 +1,8 @@
-$('gameplay.html').ready(function() {
-    $('body').on(keydown, function() {
-        var j = e.keyCode || e.which;
-
-        if (j == "A") {
-            ('meanupage').click()
-        }
-            
-    }
+(document).ready(function() {
+    var menupage = ('buttonreturn');
+    $(document).bind('keydown',function(e){
+       if(e.keyCode == 88) {
+          mydiv.fadeIn();
+       }
+    });
 });
-
