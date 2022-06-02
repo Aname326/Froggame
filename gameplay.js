@@ -9,3 +9,4 @@ document.addEventListener('keyup',(event) => {
         open('menu1.html')
     }
 })
+// when press "a" or "A" it opens menu page in a new tab
