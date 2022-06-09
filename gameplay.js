@@ -5,7 +5,7 @@ document.addEventListener('keyup',(event) => {
     if (menu === "a") {
         open('menu1.html')
     } 
-    if (menu === "A") {
+    else if (menu === "A") {
         open('menu1.html')
     }
 })
