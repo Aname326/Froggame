@@ -55,3 +55,8 @@ body {
     
 }
 /* not sure how to "italic" an image yet, so gonna leave it here first */
+
+.cursedcharacter {
+    width: 400px;
+    float: right;
+}
