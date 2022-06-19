@@ -44,4 +44,7 @@ body {
 
 .singingfrog {
     width: 400px;
+    animation-name: singingfrog;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
