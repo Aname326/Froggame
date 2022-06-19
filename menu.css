@@ -21,6 +21,7 @@ body {
 .chapter1:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
   transform: scale(.95);
+  cursor: pointer;
 }
 
 .chapter2:hover {
