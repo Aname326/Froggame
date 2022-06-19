@@ -38,6 +38,7 @@ body {
     transform: scale(.95);
     cursor: pointer;
 }
+/* shadow and pointer cursor when hover */
 
 .notebubble {
     width: 20%;
