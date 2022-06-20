@@ -3,10 +3,10 @@ document.addEventListener('keyup',(event) => {
 
 
     if (menu === "a") {
-        open('menu1.html')
+        open('menu.html')
     } 
     else if (menu === "A") {
-        open('menu1.html')
+        open('menu.html')
     }
 })
 // when press "a" or "A" it opens menu page in a new tab
