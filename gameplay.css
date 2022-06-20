@@ -40,7 +40,8 @@ body {
 /* shadow and pointer cursor when hover */
 
 .notebubble {
-    width: 20%;
+    width: 250px;
+    animation-duration: 3s;
 }
 
 .singingfrog {
@@ -58,4 +59,9 @@ body {
 .cursedcharacter {
     width: 400px;
     float: right;
+}
+
+@keyframes notebubble {
+    from{bottom: 0px;}
+    to{bottom: 789px;}
 }
