@@ -1,5 +1,5 @@
 var userInput = document.querySelector(#userinput)
 
-function answer() {
+function reply() {
     alert ("thank you")
 }
