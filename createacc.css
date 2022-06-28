@@ -10,3 +10,20 @@ body {
 .eye:hover {
     cursor: pointer;
 }
+
+.eye {
+    display: inline;
+    vertical-align: middle;
+}
+
+.password {
+    display: inline;
+    vertical-align: middle;
+}
+
+.eye2 {
+    opacity: 0;
+    display: inline;
+    vertical-align: middle;
+}
+
