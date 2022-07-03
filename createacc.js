@@ -1,15 +1,9 @@
-var eyeUnsee = document.querySelector("#eye")
-var password = document.querySelector("input:password")
-var passwordSee = document.querySelector("input:password")
-
-
 alert("Testing");
 
-const eyeSee = document.createElementNS('p')
-eyeSee.innerHTML = "hi"
+var eyeUnsee = document.querySelector("#eye");
+var password = document.querySelector("#password");
 
-function switchseen() {
-    eyeUnsee.parentNode.replaceChild(eyeSee, eyeUnsee)
-}
+const eyeSee = document.createElement('p');
+eyeSee.innerHTML = "hi";
 
-// not working but anwaysy
+// not working
