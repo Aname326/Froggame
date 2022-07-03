@@ -20,6 +20,7 @@ body {
     margin-right: 5%;
     width: auto;
     height: auto;
+    opacity: 0.8;
 }
 
 .buttonreturn {
@@ -45,6 +46,7 @@ body {
     position: fixed;
     top: 0;
     left: 350px;
+    z-index: -1;
 }
 
 .singingfrog {
@@ -52,6 +54,8 @@ body {
     animation-name: singingfrog;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    position: fixed;
+    bottom: 70px;
 }
 
 @keyframes singingfrog {
@@ -61,7 +65,9 @@ body {
 
 .cursedcharacter {
     width: 400px;
-    float: right;
+    right: 30px;
+    position: fixed;
+    bottom: 50px;
 }
 
 @keyframes notebubble {
