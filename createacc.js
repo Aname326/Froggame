@@ -1,10 +1,15 @@
-var eyeIcon = document.querySelector("#eye")
-var password = document.querySelector("#password")
-var text = document.querySelector("")
+var eyeUnsee = document.querySelector("#eye")
+var password = document.querySelector("input:password")
+var passwordSee = document.querySelector("input:password")
+
 
 alert("Testing");
 
+const eyeSee = document.createElementNS('p')
+eyeSee.innerHTML = "hi"
+
 function switchseen() {
-    console.log(password)
-    password.type = text
+    eyeUnsee.parentNode.replaceChild(eyeSee, eyeUnsee)
 }
+
+// not working but anwaysy
