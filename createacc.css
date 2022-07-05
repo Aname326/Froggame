@@ -7,24 +7,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.eye:hover {
-    cursor: pointer;
-}
-
-.eye {
-    display: inline;
-    vertical-align: middle;
-}
-
 .password {
     display: inline;
     vertical-align: middle;
 }
-
-.eye2 {
-    opacity: 0;
-    display: inline;
-    vertical-align: middle;
-}
-/* putting this icon in to make the username input in line with the password input */ 
-
