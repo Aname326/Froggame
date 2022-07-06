@@ -7,3 +7,19 @@ body {
     background-color:#C0DCC8;
 }
 
+.buttonreturn {
+    background: url(returnbuttonfinals.png);
+    background-size: cover;
+    height: 170px;
+    width: 140px;
+    border-radius: 10%;
+    border-color: white;
+    transition-duration: 0.3s;
+}
+
+.buttonreturn:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+    transform: scale(.95);
+    cursor: pointer;
+}
+/* shadow and pointer cursor when hover */
