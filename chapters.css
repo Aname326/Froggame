@@ -15,6 +15,7 @@ body {
     border-radius: 10%;
     border-color: white;
     transition-duration: 0.3s;
+    position: sticky;
 }
 
 .buttonreturn:hover {
