@@ -24,3 +24,8 @@ body {
     cursor: pointer;
 }
 /* shadow and pointer cursor when hover */
+
+.story {
+    margin-left: 300px;
+    margin-right: 300px;
+}
