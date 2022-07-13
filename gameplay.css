@@ -36,12 +36,13 @@ body {
 
 .notebubble {
     width: 250px;
-    animation-duration: 3s;
-    position: fixed;
-    top: 0;
-    left: 350px;
+    position: relative;
+    top: -330;
+    left: 342px;
     z-index: -1;
+    animation: notebubbleAnimation 2s infinite linear;
 }
+/* linear animation so the frames go evenly */
 
 .singingfrog {
     width: 400px;
@@ -64,7 +65,7 @@ body {
     bottom: 50px;
 }
 
-@keyframes notebubble {
-    from{bottom: 0px;}
-    to{bottom: 789px;}
+@keyframes notebubbleAnimation {
+    from{top:-300;}
+    to{top:700;}
 }
