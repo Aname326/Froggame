@@ -36,7 +36,7 @@ body {
 
 .notebubble {
     width: 250px;
-    position: relative;
+    position: fixed;
     top: -330;
     left: 342px;
     z-index: -1;
@@ -68,4 +68,11 @@ body {
 @keyframes notebubbleAnimation {
     from{top:-300;}
     to{top:700;}
+}
+
+.leftArrow {
+    width: 150px;
+    left: 396px;
+    position: fixed;
+    bottom: 40px;
 }
