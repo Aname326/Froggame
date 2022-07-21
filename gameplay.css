@@ -76,3 +76,10 @@ body {
     position: fixed;
     bottom: 40px;
 }
+
+.upArrow {
+    width: 150px;
+    left: 547px;
+    position: fixed;
+    bottom: 40px;
+}
