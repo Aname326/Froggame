@@ -83,3 +83,10 @@ body {
     position: fixed;
     bottom: 40px;
 }
+
+.downArrow {
+    width: 150px;
+    left: 698px;
+    position: fixed;
+    bottom: 40px;
+}
