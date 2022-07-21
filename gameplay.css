@@ -90,3 +90,10 @@ body {
     position: fixed;
     bottom: 40px;
 }
+
+.rightArrow {
+    width: 150px;
+    left: 852px;
+    position: fixed;
+    bottom: 40px;
+}
