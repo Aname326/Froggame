@@ -44,6 +44,11 @@ body {
 }
 /* linear animation so the frames go evenly */
 
+@keyframes notebubbleLeftAnimation {
+    from{top:-300;}
+    to{top:700;}
+}
+
 .singingfrog {
     width: 400px;
     animation-name: singingfrog;
@@ -63,11 +68,6 @@ body {
     right: 30px;
     position: fixed;
     bottom: 50px;
-}
-
-@keyframes notebubbleLeftAnimation {
-    from{top:-300;}
-    to{top:700;}
 }
 
 .leftArrow {
