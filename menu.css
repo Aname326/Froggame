@@ -5,17 +5,13 @@ body {
 
 .buttons {
   text-align: center;
+  transition-duration: .60s;
 }
 
-
-.button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 15px;
-  height: 240px;
-  width: 1010px;
-  transition-duration: .60s;
+.intro:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  transform: scale(.95);
+  cursor: pointer;
 }
 
 .chapter1:hover {
