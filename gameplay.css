@@ -34,13 +34,13 @@ body {
 }
 /* shadow and pointer cursor when hover */
 
-.notebubble {
+.notebubbleLeft {
     width: 250px;
     position: fixed;
     top: -330;
     left: 345px;
     z-index: -1;
-    animation: notebubbleAnimation 2s infinite linear;
+    animation: notebubbleLeftAnimation 2s infinite linear;
 }
 /* linear animation so the frames go evenly */
 
@@ -65,7 +65,7 @@ body {
     bottom: 50px;
 }
 
-@keyframes notebubbleAnimation {
+@keyframes notebubbleLeftAnimation {
     from{top:-300;}
     to{top:700;}
 }
