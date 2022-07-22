@@ -56,6 +56,12 @@ body {
     top: -330;
     left: 564px;
     z-index: 1;
+    animation: notebubbleUpAnimation 2s linear;
+}
+
+@keyframes notebubbleUpAnimation {
+    from{top:-300;}
+    to{top:750;}
 }
 
 .singingfrog {
