@@ -1,5 +1,5 @@
 body {
-    background-image: url("greennotelane.jpeg");
+    background-image: url("greenbackground2.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #C0DCC8
@@ -38,7 +38,7 @@ body {
     width: 250px;
     position: fixed;
     top: -330;
-    left: 342px;
+    left: 345px;
     z-index: -1;
     animation: notebubbleAnimation 2s infinite linear;
 }
