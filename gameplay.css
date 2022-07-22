@@ -57,7 +57,7 @@ body {
     top: -330;
     left: 504px;
     z-index: -1;
-    animation: notebubbleUpAnimation 2s linear;
+    animation: notebubbleUpAnimation 2s infinite linear;
 }
 
 @keyframes notebubbleUpAnimation {
