@@ -43,6 +43,7 @@ body {
     animation: notebubbleLeftAnimation 2s infinite linear;
 }
 /* linear animation so the frames go evenly */
+/* the bigger the z-index element goes in front of everything else */
 
 @keyframes notebubbleLeftAnimation {
     from{top:-300;}
@@ -54,7 +55,7 @@ body {
     position: fixed;
     top: -330;
     left: 564px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .singingfrog {
