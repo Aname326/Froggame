@@ -69,6 +69,17 @@ body {
   transform: scale(.95);
 }
 
+.intro {
+  background: url(introduction.jpeg);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+  height: 240px;
+  width: 1010px;
+}
+
 .chapter1 {
   background: url(chapter1block4.jpeg);
   background-size: cover;
