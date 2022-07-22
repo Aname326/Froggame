@@ -39,14 +39,22 @@ body {
     position: fixed;
     top: -330;
     left: 345px;
-    z-index: -1;
+    z-index: 10;
     animation: notebubbleLeftAnimation 2s infinite linear;
 }
 /* linear animation so the frames go evenly */
 
 @keyframes notebubbleLeftAnimation {
     from{top:-300;}
-    to{top:700;}
+    to{top:750;}
+}
+
+.notebubbleUp {
+    width: 250px;
+    position: fixed;
+    top: -330;
+    left: 564px;
+    z-index: -1;
 }
 
 .singingfrog {
