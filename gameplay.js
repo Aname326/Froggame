@@ -17,7 +17,7 @@ var notebubbles = document.getElementsByClassName("notebubbleLeft")
 document.addEventListener('keydown',(pass) => {
     var test = pass.key;
 
-    if (notebubbles >= 520 && notebubbles <= 720 && test == "ArrowLeft") {
-        alert ("uh oh");
+    if (test == "ArrowLeft" && notebubbles >= 520 && notebubbles <= 720) {
+        alert ("uh oh :0");
     }
 })
