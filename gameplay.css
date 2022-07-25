@@ -62,8 +62,9 @@ body {
 
 @keyframes notebubbleUpAnimation {
     from{top:-300;}
-    to{top:750;}
+    to{top:520;}
 }
+/* not going all the way to know when is the notebubble touching the arrows */
 
 .singingfrog {
     width: 400px;
@@ -74,10 +75,6 @@ body {
     bottom: 70px;
 }
 
-@keyframes singingfrog {
-    
-}
-/* not sure how to "italic" an image yet, so gonna leave it here first */
 
 .cursedcharacter {
     width: 400px;
