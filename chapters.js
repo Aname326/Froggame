@@ -13,8 +13,10 @@ document.addEventListener('keyup',(event) => {
 
 
 var confirm = document.querySelector("#confirm")
-var string = document.querySelector("#instructions")
+var string = document.querySelector("#try")
+var instruction = document.getElementById("instructions")
 
 function instructions() {
     string.innerHTML = "yolo"
+    instruction.innerHTML = "hahaha"
 }
