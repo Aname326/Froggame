@@ -19,5 +19,5 @@ document.addEventListener('keydown',(pass) => {
 
     if (test == "ArrowLeft" && notebubbles >= 520 && notebubbles <= 720) {
         alert ("uh oh :0");
-    }
+    } 
 })
