@@ -48,7 +48,7 @@ body {
 
 @keyframes notebubbleLeftAnimation {
     from{top:-300;}
-    to{top:750;}
+    to{top:820;}
 }
 
 .notebubbleUp {
@@ -62,7 +62,7 @@ body {
 
 @keyframes notebubbleUpAnimation {
     from{top:-300;}
-    to{top:520;}
+    to{top:720;}
 }
 /* not going all the way to know when is the notebubble touching the arrows */
 
