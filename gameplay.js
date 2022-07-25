@@ -11,3 +11,11 @@ document.addEventListener('keyup',(event) => {
 })
 // when press "a" or "A" it opens menu page in a new tab
 
+
+var notebubbles = document.getElementsByClassName("notebubbleLeft")
+
+document.addEventListener('keydown',(event)) {
+    if (notebubbles > 520 && notebubble < 720) {
+        alert ("uh oh")
+    }
+}
