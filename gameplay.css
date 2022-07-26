@@ -39,7 +39,7 @@ body {
     width: 250px;
     position: fixed;
     top: -330;
-    left: 345px;
+    left: 348px;
     z-index: -1;
     animation: notebubbleLeftAnimation 2s infinite linear;
 }
@@ -55,7 +55,7 @@ body {
     width: 250px;
     position: fixed;
     top: -330;
-    left: 503px;
+    left: 502px;
     z-index: -1;
     animation: notebubbleUpAnimation 2s infinite linear;
 }
@@ -84,7 +84,7 @@ body {
     width: 250px;
     position: fixed;
     top: -330;
-    left: 801px;
+    left: 802px;
     z-index: -1;
     animation: notebubbleRightAnimation 2s infinite linear;
 }
