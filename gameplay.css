@@ -66,6 +66,20 @@ body {
 }
 /* not going all the way to know when is the notebubble touching the arrows */
 
+.notebubbleDown {
+    width: 250px;
+    position: fixed;
+    top: -330;
+    left: 650px;
+    z-index: -1;
+    animation: notebubbleDownAnimation 2s infinite linear;
+}
+
+@keyframes notebubbleDownAnimation {
+    from{top:-300;}
+    to{top:720;}
+}
+
 .singingfrog {
     width: 400px;
     animation-name: singingfrog;
