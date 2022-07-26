@@ -80,6 +80,20 @@ body {
     to{top:820;}
 }
 
+.notebubbleRight {
+    width: 250px;
+    position: fixed;
+    top: -330;
+    left: 780px;
+    z-index: -1;
+    animation: notebubbleRightAnimation 2s infinite linear;
+}
+
+@keyframes notebubbleRightAnimation {
+    from{top:-300;}
+    to{top:820;}
+}
+
 .singingfrog {
     width: 400px;
     animation-name: singingfrog;
