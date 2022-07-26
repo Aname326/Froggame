@@ -84,7 +84,7 @@ body {
     width: 250px;
     position: fixed;
     top: -330;
-    left: 780px;
+    left: 801px;
     z-index: -1;
     animation: notebubbleRightAnimation 2s infinite linear;
 }
