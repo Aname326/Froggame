@@ -21,3 +21,16 @@ document.addEventListener('keydown',(pass) => {
         alert ("uh oh :0");
     } 
 })
+
+
+let notebubbleUp = document.getElementsByClassName("notebubbleUp")
+
+function lateStart() {
+    alert ("workss")
+    notebubbleUp.style.display = "none"
+}
+
+const time = 3000
+let late = 1 * time
+
+setTimeout(lateStart, late)
