@@ -29,6 +29,7 @@ function lateStart() {
     alert ("workss")
     notebubbleUp.style.display = "none"
 }
+// function works but line30 is not working
 
 const time = 3000
 let late = 1 * time
