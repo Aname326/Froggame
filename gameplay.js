@@ -14,22 +14,22 @@ document.addEventListener('keyup',(event) => {
 
 var notebubbles = document.getElementsByClassName("notebubbleLeft")
 
-document.addEventListener('keydown',(pass) => {
-    var test = pass.key;
 
+document.addEventListener('keydown',(pass) => {
+    
     if (test == "ArrowLeft" && notebubbles >= 520 && notebubbles <= 720) {
-        alert ("uh oh :0");
+        var test = pass.key;
     } 
 })
 
 
-let notebubbleUp = document.getElementsByClassName("notebubbleUp")
+let notebubbleUp = document.getElementById("notebubbleUp")
 
 function lateStart() {
     alert ("workss")
     notebubbleUp.style.display = "none"
 }
-// function works but line30 is not working
+// function shows alert then removes notebubble in uplane after 3 seconds
 
 const time = 3000
 let late = 1 * time
