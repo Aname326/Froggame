@@ -11,27 +11,28 @@ document.addEventListener('keyup',(event) => {
 })
 // when press "a" or "A" it opens menu page in a new tab
 
+var notebubbleLeft = document.getElementById("notebubbleLeft")
 
-var notebubbles = document.getElementsByClassName("notebubbleLeft")
+var hitTheNote = setInterval(function() {
+    var notebubbleLeftTop = document.getElementById("notebubbleLeft").value("top")
+
+    document.addEventListener('keydown',(disappear) => {
+        var hit = disappear.key;
+
+        if (hit == "ArrowLeft") {
+            alert ("yoho")
+        }
+    })
+},10);
 
 
-document.addEventListener('keydown',(pass) => {
-    
-    if (test == "ArrowLeft" && notebubbles >= 520 && notebubbles <= 720) {
-        var test = pass.key;
-    } 
-})
-
-
-let notebubbleUp = document.getElementById("notebubbleUp")
-
-function lateStart() {
-    alert ("workss")
-    notebubbleUp.style.display = "none"
-}
+//function 'commentfied' to test the setInterval function Line31-34,36-38
+var notebubbleUp = document.getElementById("notebubbleUp")
+//function lateStart() {
+//    alert ("workss")
+//    notebubbleUp.style.display = "none"
+//}
 // function shows alert then removes notebubble in uplane after 3 seconds
-
-const time = 3000
-let late = 1 * time
-
-setTimeout(lateStart, late)
+//const time = 3000
+//let late = 1 * time
+//setTimeout(lateStart, late)
