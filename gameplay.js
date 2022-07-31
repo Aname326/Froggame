@@ -19,7 +19,7 @@ var hitTheNote = setInterval(function() {
     document.addEventListener('keydown',(disappear) => {
         var hit = disappear.key;
 
-        if (hit == "ArrowLeft") {
+        if (notebubbleLeftTop > 520) {
             alert ("yoho")
         }
     })
