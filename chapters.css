@@ -45,14 +45,17 @@ hr {
     width: 70%;
     text-align: center;
 }
+/* horizontal lines for every chapter html pages under their heading */
 
 .name {
     margin-left: 300px;
 }
+/* userinput for player names */
 
 .instructions {
     margin-left: 300px;
 }
+/* instructions for intro.html */
 
 .heading {
     text-align: center; 
