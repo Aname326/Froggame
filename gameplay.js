@@ -11,9 +11,20 @@ document.addEventListener('keyup',(event) => {
 })
 // when press "a" or "A" it opens menu page in a new tab
 
-var notebubbleLeft = document.getElementById("notebubbleLeft")
-var notebubbleLeftTop = document.getElementsByClassName("notebubbleLeft").getPropertyValue("top")
-console.log(notebubbleLeftTop)
+var notebubbleLeft = document.querySelector(".notebubbleLeft")
+var notebubbleLeftTop = document.querySelector(".notebubbleLeft").getPropertyValue("top")
+
+
+
+document.addEventListener('keypress', (gone) => {
+    var hitTheNote = gone.key;
+
+    if (hitTheNote == "ArrowLeft") {
+        if (notebubbleLeftTop >= 520 && notebubbleLeft <= 720) {
+            notebubbleLeft.style.display = "none"
+        }
+    }
+})
 
 
 
