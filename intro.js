@@ -20,5 +20,5 @@ instruction.style.display = "none"
 // instructions doesn't show at the start
 
 function instructions() {
-    instruction.style.display
+    instruction.style.display = "block"
 }
