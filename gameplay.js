@@ -12,6 +12,9 @@ document.addEventListener('keyup',(event) => {
 // when press "a" or "A" it opens menu page in a new tab
 
 var notebubbleLeft = document.getElementById("notebubbleLeft")
+var notebubbleLeftTop = document.getElementsByClassName("notebubbleLeft").getPropertyValue("top")
+console.log(notebubbleLeftTop)
+
 
 
 
