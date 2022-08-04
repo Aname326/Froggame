@@ -17,6 +17,7 @@ var string = document.querySelector("#try")
 var instruction = document.getElementById("instructions")
 
 instruction.style.display = "none"
+// instructions doesn't show at the start
 
 function instructions() {
     string.innerHTML = "yolo"
