@@ -41,6 +41,7 @@ body {
     text-align: center; 
     font-family: fantasy;
 }
+/* headings of intro & chapter 1-4 */
 
 hr {
     height:2px;
@@ -55,10 +56,10 @@ hr {
 .name {
     margin-left: 300px;
 }
-/* userinput for player names */
+/* intro.html | userinput for player names */
 
 .instructions {
     margin-left: 300px;
 }
-/* instructions for intro.html */
+/* intro.html | instructions */
 
