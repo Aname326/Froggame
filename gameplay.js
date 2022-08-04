@@ -13,17 +13,7 @@ document.addEventListener('keyup',(event) => {
 
 var notebubbleLeft = document.getElementById("notebubbleLeft")
 
-var hitTheNote = setInterval(function() {
-    var notebubbleLeftTop = document.getElementById("notebubbleLeft").value("top")
 
-    document.addEventListener('keydown',(disappear) => {
-        var hit = disappear.key;
-
-        if (notebubbleLeftTop >= 520) {
-            alert ("yoho")
-        }
-    })
-},10);
 
 
 //function 'commentfied' to test the setInterval function Line31-34,36-38
