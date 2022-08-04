@@ -37,6 +37,11 @@ body {
     font-size: 20px;
 }
 
+.heading {
+    text-align: center; 
+    font-family: fantasy;
+}
+
 hr {
     height:2px;
     border-width:0;
@@ -57,7 +62,3 @@ hr {
 }
 /* instructions for intro.html */
 
-.heading {
-    text-align: center; 
-    font-family: fantasy;
-}
