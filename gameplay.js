@@ -12,7 +12,7 @@ document.addEventListener('keyup',(event) => {
 // when press "a" or "A" it opens menu page in a new tab
 
 var notebubbleLeft = document.querySelector(".notebubbleLeft")
-var notebubbleLeftTop = document.querySelector(".notebubbleLeft").getPropertyValue("top")
+var notebubbleLeftTop = document.querySelector(".notebubbleLeft").style.top
 
 
 
