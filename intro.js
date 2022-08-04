@@ -16,6 +16,8 @@ var confirm = document.querySelector("#confirm")
 var string = document.querySelector("#try")
 var instruction = document.getElementById("instructions")
 
+instruction.style.display = "none"
+
 function instructions() {
     string.innerHTML = "yolo"
     instruction.innerHTML = "hahaha"
