@@ -16,8 +16,8 @@ var notebubbleLeftTop = document.querySelector(".notebubbleLeft").style.top
 
 
 
-document.addEventListener('keypress', (gone) => {
-    var hitTheNote = gone.key;
+document.addEventListener('keypress', (event) => {
+    var hitTheNote = event.key;
 
     if (hitTheNote == "ArrowLeft") {
         if (notebubbleLeftTop >= 520 && notebubbleLeft <= 720) {
