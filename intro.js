@@ -20,6 +20,5 @@ instruction.style.display = "none"
 // instructions doesn't show at the start
 
 function instructions() {
-    string.innerHTML = "yolo"
-    instruction.innerHTML = "hahaha"
+    instruction.style.display
 }
