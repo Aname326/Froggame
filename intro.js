@@ -22,3 +22,4 @@ instruction.style.display = "none"
 function instructions() {
     instruction.style.display = "block"
 }
+// onclick show instructions
