@@ -58,8 +58,8 @@ hr {
 }
 /* intro.html | userinput for player names */
 
-.instructions {
-    margin-left: 300px;
+#instructions {
+    text-align: center;
 }
 /* intro.html | instructions */
 
