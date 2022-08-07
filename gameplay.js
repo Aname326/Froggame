@@ -16,13 +16,14 @@ var notebubbleLeftTop = document.querySelector(".notebubbleLeft").style.top
 
 
 
-document.addEventListener('keypress', (event) => {
-    var hitTheNote = event.key;
+document.addEventListener('keydown', (disappear) => {
+    var hitTheNote = disappear.key;
 
     if (hitTheNote == "ArrowLeft") {
         notebubbleLeft.style.display = "none"
     }
 })
+// when click arrow left, notebubbleLeft disappears
 
 
 
