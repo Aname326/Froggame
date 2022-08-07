@@ -20,9 +20,7 @@ document.addEventListener('keypress', (event) => {
     var hitTheNote = event.key;
 
     if (hitTheNote == "ArrowLeft") {
-        if (notebubbleLeftTop >= 520 && notebubbleLeft <= 720) {
-            notebubbleLeft.style.display = "none"
-        }
+        notebubbleLeft.style.display = "none"
     }
 })
 
@@ -30,13 +28,13 @@ document.addEventListener('keypress', (event) => {
 
 
 
-//function 'commentfied' to test the setInterval function Line31-34,36-38
+
 var notebubbleUp = document.getElementById("notebubbleUp")
-//function lateStart() {
-//    alert ("workss")
-//    notebubbleUp.style.display = "none"
-//}
+function lateStart() {
+    notebubbleUp.style.display = "none"
+}
 // function shows alert then removes notebubble in uplane after 3 seconds
-//const time = 3000
-//let late = 1 * time
-//setTimeout(lateStart, late)
+
+const time = 3000
+let late = 1 * time
+setTimeout(lateStart, late)
