@@ -44,15 +44,3 @@ document.addEventListener('keydown', (disappear) => {
 
 
 
-
-
-
-
-function lateStart() {
-    notebubbleUp.style.display = "none"
-}
-// function shows alert then removes notebubble in uplane after 3 seconds
-
-const time = 3000
-let late = 1 * time
-setTimeout(lateStart, late)
