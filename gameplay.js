@@ -19,6 +19,7 @@ var notbubbles = document.getElementsByClassName("notebubbles")
 // all the notebubble variables
 
 var pleasantRate = 0
+console.log(pleasantRate)
 
 
 document.addEventListener('keydown', (disappear) => {
@@ -27,6 +28,8 @@ document.addEventListener('keydown', (disappear) => {
     if (hitTheNote == "ArrowLeft") {
         notebubbleLeft.style.display = "none"
         notebubbleLeft.classList.add("animate")
+        pleasantRate += 1
+        console.log(pleasantRate)
     }
     else if (hitTheNote == "ArrowUp") {
         notebubbleUp.style.display = "none"
