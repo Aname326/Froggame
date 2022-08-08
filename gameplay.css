@@ -86,7 +86,7 @@ body {
     top: -330;
     left: 802px;
     z-index: -1;
-    animation: notebubbleRightAnimation 2s 3 linear;
+    animation: notebubbleRightAnimation 2s infinite linear;
 }
 
 @keyframes notebubbleRightAnimation {
