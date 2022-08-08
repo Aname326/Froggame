@@ -13,7 +13,7 @@ document.addEventListener('keyup',(event) => {
 
 var notebubbleLeft = document.querySelector(".notebubbleLeft")
 var notebubbleLeftTop = document.querySelector(".notebubbleLeft").style.top
-
+var notebubbleUp = document.getElementById("notebubbleUp")
 
 
 document.addEventListener('keydown', (disappear) => {
@@ -21,6 +21,9 @@ document.addEventListener('keydown', (disappear) => {
 
     if (hitTheNote == "ArrowLeft") {
         notebubbleLeft.style.display = "none"
+    }
+    else if (hitTheNote == "ArrowUp") {
+        notebubbleUp.style.display = "none"
     }
 })
 // when click arrow left, notebubbleLeft disappears
@@ -30,7 +33,7 @@ document.addEventListener('keydown', (disappear) => {
 
 
 
-var notebubbleUp = document.getElementById("notebubbleUp")
+
 function lateStart() {
     notebubbleUp.style.display = "none"
 }
