@@ -12,8 +12,9 @@ document.addEventListener('keyup',(event) => {
 // when press "a" or "A" it opens menu page in a new tab
 
 var notebubbleLeft = document.querySelector(".notebubbleLeft")
-var notebubbleLeftTop = document.querySelector(".notebubbleLeft").style.top
 var notebubbleUp = document.getElementById("notebubbleUp")
+var notebubbleDown = document.getElementById("notebubbleDown")
+var notebubbleRight = document.getElementById("notebubbleRight")
 
 
 document.addEventListener('keydown', (disappear) => {
@@ -24,6 +25,12 @@ document.addEventListener('keydown', (disappear) => {
     }
     else if (hitTheNote == "ArrowUp") {
         notebubbleUp.style.display = "none"
+    }
+    else if (hitTheNote == "ArrowDown") {
+        notebubbleDown.style.display = "none"
+    }
+    else if (hitTheNote == "ArrowRight") {
+        notebubbleRight.style.display = "none"
     }
 })
 // when click arrow left, notebubbleLeft disappears
