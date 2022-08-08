@@ -16,6 +16,9 @@ var notebubbleUp = document.getElementById("notebubbleUp")
 var notebubbleDown = document.getElementById("notebubbleDown")
 var notebubbleRight = document.getElementById("notebubbleRight")
 var notbubbles = document.getElementsByClassName("notebubbles")
+// all the notebubble variables
+
+var pleasantRate = 0
 
 
 document.addEventListener('keydown', (disappear) => {
