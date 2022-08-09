@@ -21,9 +21,10 @@ body {
 .pleasantRateBarFilled {
     float: right;
     z-index: 0;
-    margin-right: 5.8%;
+    margin-left: 7.1%;
     width: 1093px;
-    opacity: 0.9;
+    opacity: 0.6;
+    position: absolute;
 }
 
 .buttonreturn {
