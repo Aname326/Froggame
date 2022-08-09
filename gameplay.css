@@ -18,6 +18,14 @@ body {
     z-index: 1;
 }
 
+.pleasantRateBarFilled {
+    float: right;
+    z-index: 0;
+    margin-right: 5%;
+    width: 1093px;
+    opacity: 0.9;
+}
+
 .buttonreturn {
     background: url(returnbuttonfinals.png);
     background-size: cover;
