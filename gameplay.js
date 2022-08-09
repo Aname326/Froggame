@@ -26,14 +26,17 @@ document.addEventListener('keydown', (disappear) => {
     var hitTheNote = disappear.key;
 
     if (hitTheNote == "ArrowLeft") {
-        notebubbleLeft.style.display = "none"
-        notebubbleLeft.classList.add("animate")
-        pleasantRate += 1
-        console.log(pleasantRate)
+        //notebubbleLeft.style.display = "none"
+        notebubbleLeft.style.top = "30px"
+        notebubbleLeft.style.add("animate")
+        //if (notebubbleLeft.style.display == "none") {
+        //    notebubbleLeft.style.display = "block"
+        //}
     }
     else if (hitTheNote == "ArrowUp") {
         notebubbleUp.style.display = "none"
-        notebubbleUp.style.add("animate")
+        pleasantRate += 1
+        console.log(pleasantRate)
     }
     else if (hitTheNote == "ArrowDown") {
         notebubbleDown.style.display = "none"
