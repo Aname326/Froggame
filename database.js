@@ -23,3 +23,5 @@ const analytics = getAnalytics(app);
 
 import {getDatabase, set, get, update, remove, red, child}
 from "https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js"
+
+const db = getDatabase();
