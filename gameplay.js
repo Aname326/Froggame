@@ -26,9 +26,14 @@ document.addEventListener('keydown', (disappear) => {
     var hitTheNote = disappear.key;
 
     if (hitTheNote == "ArrowLeft") {
-        //notebubbleLeft.style.display = "none"
-        notebubbleLeft.style.top = "30px"
-        notebubbleLeft.style.add("animate")
+        notebubbleLeft.style.display = "none"
+        console.log(notebubbleLeft.style.animation)
+        notebubbleLeft.classList.remove("notebubbleLeft")
+
+        if (notebubbleLeft.classList != "notebubbleLeft") {
+            notebubbleLeft.style.display = "block"
+            notebubbleLeft.classList.add("notebubbleLeft")
+        }
         //if (notebubbleLeft.style.display == "none") {
         //    notebubbleLeft.style.display = "block"
         //}
