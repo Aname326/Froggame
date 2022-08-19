@@ -21,7 +21,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-import {getDatabase, set, get, update, remove, red, child}
+import {getDatabase, set, get, update, remove, ref, child}
 from "https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js"
 
 const db = getDatabase();
+
+var createBtn = document.querySelector("#createBtn")
+var loginBtn = document.querySelector("#loginBtn")
