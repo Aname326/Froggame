@@ -26,10 +26,27 @@ from "https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js"
 
 const db = getDatabase();
 
-var createBtn = document.querySelector("#createBtn")
-var loginBtn = document.querySelector("#loginBtn")
+var createBtn = document.querySelector("#createBtn");
+var loginBtn = document.querySelector("#loginBtn");
 
-var createName = document.getElementsByClassName("createName")
-var createPw = document.getElementsByClassName("createPw")
-var loginName = document.getElementsByClassName("loginName")
-var loginPw = document.getElementsByClassName("loginPw")
+var createName = document.getElementsByClassName("createName");
+var createPw = document.getElementsByClassName("createPw");
+var loginName = document.getElementsByClassName("loginName");
+var loginPw = document.getElementsByClassName("loginPw");
+
+var highscore = document.querySelector("#highscore")
+
+
+function createAcc() {
+    set(ref(db, "Users/" + createName.value + createPw.value), {
+        Name: createName.value,
+        Pw: createPw.value,
+        Highscore: highscore.value
+    })
+    .then(() => {
+        alert ("Welcome!")
+    })
+    .catch((error) => {
+        alert(error)
+    });
+}
