@@ -28,3 +28,8 @@ const db = getDatabase();
 
 var createBtn = document.querySelector("#createBtn")
 var loginBtn = document.querySelector("#loginBtn")
+
+var createName = document.getElementsByClassName("createName")
+var createPw = document.getElementsByClassName("createPw")
+var loginName = document.getElementsByClassName("loginName")
+var loginPw = document.getElementsByClassName("loginPw")
