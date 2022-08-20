@@ -45,3 +45,6 @@ function createAcc() {
         alert(error)
     });
 }
+
+
+createBtn.addEventListener('click', createAcc);
