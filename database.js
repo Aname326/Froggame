@@ -47,4 +47,3 @@ function createAcc() {
 }
 
 
-createBtn.addEventListener('click', createAcc);
