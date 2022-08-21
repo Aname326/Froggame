@@ -29,14 +29,14 @@ var createPw = document.getElementsByClassName("createPw");
 var loginName = document.getElementsByClassName("loginName");
 var loginPw = document.getElementsByClassName("loginPw");
 
-var highscore = document.querySelector("#highscore")
+var highscore = document.querySelector("#highscore");
 
 
 function createAcc() {
     set(ref(db, "Users/" + createName.value + createPw.value), {
         Name: createName.value,
         Pw: createPw.value,
-        Highscore: highscore.value
+        Highscore: 0
     })
     .then(() => {
         alert ("Welcome!")
@@ -47,3 +47,4 @@ function createAcc() {
 }
 
 
+createBtn.addEventListener('click', createAcc);
