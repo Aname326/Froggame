@@ -48,3 +48,6 @@ function createAcc() {
 
 
 createBtn.addEventListener('click', createAcc);
+
+
+console.log("database connected")
