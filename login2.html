@@ -35,7 +35,7 @@
     <input class="createName" type="text" placeholder="Username">
     <br><br>
     
-    <input class="userId" placeholder="User ID" type="number"> 
+    <input class="createId" placeholder="User ID" type="text"> 
     <br><br>
 
     <button id="createBtn">Create account</button>
@@ -70,17 +70,17 @@
     var loginBtn = document.querySelector("#loginBtn");
 
     var createName = document.getElementsByClassName("createName");
-    var createPw = document.getElementsByClassName("createPw");
+    var createId = document.getElementsByClassName("createId");
     var loginName = document.getElementsByClassName("loginName");
-    var loginPw = document.getElementsByClassName("loginPw");
+    var loginId = document.getElementsByClassName("loginId");
 
     var highscore = document.querySelector("#highscore");
 
 
     function createAcc() {
-        set(ref(db, "Users/" + createName.value && createPw.value), {
+        set(ref(db, "Users/" + createId.value), {
             Name: createName.value,
-            Pw: createPw.value,
+            ID: createId.value,
             Highscore: 0
         })
         .then(() => {
