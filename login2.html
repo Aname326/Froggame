@@ -35,7 +35,7 @@
     <input class="createName" type="text" placeholder="Username">
     <br><br>
     
-    <input class="createId" placeholder="User ID" type="text"> 
+    <input class="createId" placeholder="User ID" type="number"> 
     <br><br>
 
     <button id="createBtn">Create account</button>
@@ -78,6 +78,8 @@
 
 
     function createAcc() {
+        console.log(createId.value)
+        console.log(createName.value)
         set(ref(db, "Users/" + createId.value), {
             Name: createName.value,
             ID: createId.value,
@@ -95,6 +97,8 @@
 
     createBtn.addEventListener('click', createAcc);
 
+    console.log(createId)
+    console.log(createName)
 
 
 </script>
