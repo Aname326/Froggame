@@ -53,12 +53,12 @@
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyCDX8InMHamarx82XzzE-wy0aOc__NNcV8",
-    authDomain: "for-real-this-time-frog-game.firebaseapp.com",
-    projectId: "for-real-this-time-frog-game",
-    storageBucket: "for-real-this-time-frog-game.appspot.com",
-    messagingSenderId: "858293788765",
-    appId: "1:858293788765:web:2b3184069da9d25a6cadb4"
+    apiKey: "AIzaSyDKvV1UJgnMr0i9VRCaIrcG_OSgmhpDAZc",
+    authDomain: "real-frog-game-2.firebaseapp.com",
+    projectId: "real-frog-game-2",
+    storageBucket: "real-frog-game-2.appspot.com",
+    messagingSenderId: "596703894774",
+    appId: "1:596703894774:web:ef144ca8f68ac2c6ed20d7"
   };
 
   // Initialize Firebase
@@ -82,7 +82,7 @@
 
 
     function createAcc() {
-        set(ref(db, "Users/" + createName.value + createPw.value), {
+        set(ref(db, "Users/" + createName.value && createPw.value), {
             Name: createName.value,
             Pw: createPw.value,
             Highscore: 0
