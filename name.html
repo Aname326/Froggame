@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> #firstName {float: left; padding: 3%;} #lastName {float: left; padding: 3%;} </style> 
+</head> 
+
+<body> 
+    <div id="firstName"> 
+    <h1> First Name</h1> 
+    <button onclick="nextName()"> Next </button> 
+    <h2 id="showFirst"> </h2> 
+    </div> 
+    <div id="lastName" >
+    <h1> Last Name</h1> 
+    <button onclick="lastName()"> Next </button> 
+    <h2 id="showLast"> </h2> 
+    </div> 
+</body>
+
+<script> 
+var firstList = ["Charleen", "Gloria", "Josh", "Frederick", "Peter", "Paul", "Gabby"] 
+var showFirst = document.querySelector("#showFirst")
+var order = 0 
+var secondList = ["John", "Ben", "Henry", "Ancy", "Mancy", "Dancy"]
+var list = 0
+var showLast = document.querySelector("#showLast")
+
+function nextName() {
+    showFirst.innerHTML = firstList [order]
+    order = order + 1
+    if (order == 7) {
+        order = 0
+    }
+}
+
+function lastName() {
+    showLast.innerHTML = secondList [list]
+    list = list + 1
+    if (list == 6) {
+        list = 0
+    }
+}
+</script>
+</html>

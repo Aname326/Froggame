@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> #firstName {float: left; padding: 3%;} #lastName {float: left; padding: 3%;} </style> 
+</head> 
+
+<body> 
+    <div id="firstName"> 
+
+        <h1>Question 1</h1> 
+
+        <button onclick="nextName()"> Next </button> 
+
+        <h2 id="showFirst"> </h2> 
+
+        <input class="answer" type="number">
+
+        <button onclick="submit()">Submit</button>
+
+    </div> 
+
+ 
+    
+</body>
+
+
+<script> 
+var firstList = ["What is 2 + 2?", "What is 3 + 3?", "What is 4+4?"] 
+var order = 0 
+var secondList = [4, 6, 8]
+var answer = document.querySelector("#answer")
+
+
+
+function nextName() {
+    showFirst.innerHTML = firstList [order]
+    order = order + 1
+    if (order == 3) {
+        order = 0
+    }
+
+    
+}
+
+
+var value = secondList [order].value;
+
+function submit() {
+    if (answer == value) {
+        alert ("Ding ding! You're right :D")
+    } else if (answer != secondList [order].value){
+        alert ("haha you suck!")
+    }
+}
+
+</script>
+</html>
