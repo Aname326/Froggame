@@ -32,10 +32,10 @@
     <h1>Create an account to save your progress!</h1>
     <br><br>
 
-    <input class="createName" type="text" placeholder="Username">
+    <input id="createName" type="text" placeholder="Username">
     <br><br>
     
-    <input class="createId" placeholder="User ID" type="number"> 
+    <input id="createId" placeholder="User ID" type="number"> 
     <br><br>
 
     <button id="createBtn">Create account</button>
@@ -69,10 +69,10 @@
     var createBtn = document.querySelector("#createBtn");
     var loginBtn = document.querySelector("#loginBtn");
 
-    var createName = document.getElementsByClassName("createName");
-    var createId = document.getElementsByClassName("createId");
-    var loginName = document.getElementsByClassName("loginName");
-    var loginId = document.getElementsByClassName("loginId");
+    var createName = document.getElementById("createName");
+    var createId = document.getElementById("createId");
+    var loginName = document.getElementById("loginName");
+    var loginId = document.getElementById("loginId");
 
     var highscore = document.querySelector("#highscore");
 
