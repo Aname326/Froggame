@@ -94,12 +94,28 @@
         });
     }
 
+    function login() {
+        const dbref = ref(db);
+
+        get(child(dbref), "Users/" + loginId.value)
+
+        .then((snapshot) => {
+            if (snapshot.exists()) {
+                console.log(snapshot.val().Name);
+                console.log(snapshot.val().ID);
+                console.log(snapshot.val().Highscore);
+            } else {
+                alert("data not found");
+            }
+        })
+
+        .catch((error) => {
+            alert(error)
+        })
+    }
 
     createBtn.addEventListener('click', createAcc);
-
-    console.log(createId)
-    console.log(createName)
-
+    loginBtn.addEventListener('click',login)
 
 </script>
 <!--all javascript in database.js-->
