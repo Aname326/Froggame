@@ -42,7 +42,7 @@
 </div>
 </body>
 <script type="module"> 
-  // Import the functions you need from the SDKs you need
+    // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -51,15 +51,15 @@
   const firebaseConfig = {
     apiKey: "AIzaSyDKvV1UJgnMr0i9VRCaIrcG_OSgmhpDAZc",
     authDomain: "real-frog-game-2.firebaseapp.com",
+    databaseURL: "https://real-frog-game-2-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "real-frog-game-2",
     storageBucket: "real-frog-game-2.appspot.com",
     messagingSenderId: "596703894774",
-    appId: "1:596703894774:web:ef144ca8f68ac2c6ed20d7"
+    appId: "1:596703894774:web:754cd69024da09c1ed20d7"
   };
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-// database has to be public in order to be edited 
 
     import {getDatabase, set, get, update, remove, ref, child}
     from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js"
