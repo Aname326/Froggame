@@ -80,18 +80,39 @@
    function createAcc() {
        console.log(createId.value)
        console.log(createName.value)
-       set(ref(db, "Users/" + createId.value), {
-           Name: createName.value,
-           ID: createId.value,
-           Highscore: 0
-       })
-       .then(() => {
-           alert ("Welcome!")
-       })
-       .catch((error) => {
+
+       if (createId == "") {
+            alert("please enter a ID")
+            return false
+            // if id input is blank, cannot create account
+       } 
+       else if (createName == "") {
+           alert("please enter a username")
+           return false
+           // if name input is blank, cannot create account
+       } 
+       else if (createId == "" && createName == "") {
+            alert("please enter a ID and a username")
+            return false
+            // if id input and name input are blank, cannot create account
+       } 
+       else {
+            set(ref(db, "Users/" + createId.value), {
+            Name: createName.value,
+            ID: createId.value,
+            Highscore: 0
+        })
+
+        .then(() => {
+            alert ("Welcome! Now please login to your existing account!")
+        })
+
+        .catch((error) => {
            alert(error)
            // allows to catch any error 
        });
+       }
+
    }
 
    function login() {
