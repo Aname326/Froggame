@@ -57,7 +57,7 @@ body {
 .notebubbleUp {
     width: 250px;
     position: fixed;
-    top: 30;
+    top: 490;
     left: 502px;
     z-index: -1;
 }
