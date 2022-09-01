@@ -47,7 +47,6 @@ body {
 .notebubbleLeft {
     width: 250px;
     position: fixed;
-    top: 30;
     left: 348px;
     z-index: -1;
 
@@ -57,7 +56,6 @@ body {
 .notebubbleUp {
     width: 250px;
     position: fixed;
-    top: 490;
     left: 502px;
     z-index: -1;
 }
@@ -65,7 +63,6 @@ body {
 .notebubbleDown {
     width: 250px;
     position: fixed;
-    top: 30;
     left: 650px;
     z-index: -1;
 }
@@ -73,7 +70,6 @@ body {
 .notebubbleRight {
     width: 250px;
     position: fixed;
-    top: 30;
     left: 802px;
     z-index: -1;
 }
