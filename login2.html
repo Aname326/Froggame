@@ -14,14 +14,14 @@
         <h1>Login to an existing account!</h1>
         <br><br>
 
-        <input type="text" placeholder="Username" class="loginName">
-        <br><br>
-
 
         <input placeholder="User ID" class="loginId">
         <br><br>
 
         <button id="loginBtn">Login</button>
+
+        <p id="showName"></p>
+        <p id="showHighscore"></p>
     </div>
 
 <br><br><br>
@@ -76,27 +76,15 @@
 
    var highscore = document.querySelector("#highscore");
 
+   var showName = document.getElementById("showName")
+   var showHighscore = document.getElementById("showHighscore")
+
 
    function createAcc() {
        console.log(createId.value)
        console.log(createName.value)
 
-       if (createId == "") {
-            alert("please enter a ID")
-            return false
-            // if id input is blank, cannot create account
-       } 
-       else if (createName == "") {
-           alert("please enter a username")
-           return false
-           // if name input is blank, cannot create account
-       } 
-       else if (createId == "" && createName == "") {
-            alert("please enter a ID and a username")
-            return false
-            // if id input and name input are blank, cannot create account
-       } 
-       else {
+       
             set(ref(db, "Users/" + createId.value), {
             Name: createName.value,
             ID: createId.value,
@@ -113,7 +101,7 @@
        });
        }
 
-   }
+   
 
    function login() {
        const dbref = ref(db);
@@ -122,9 +110,8 @@
 
        .then((snapshot) => {
            if (snapshot.exists()) {
-               console.log(snapshot.val().Name);
-               console.log(snapshot.val().ID);
-               console.log(snapshot.val().Highscore);
+               showName.innerHTML = "Name:" + snapshot.val().Name;
+               showHighscore.innerHTML = "Highscore" + snapshot.val().Highscore;
            } else {
                alert("data not found");
            }
