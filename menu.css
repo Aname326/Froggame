@@ -94,3 +94,7 @@ body {
   text-align: center;
   font-family: fantasy;
 }
+
+.playerInfo {
+  margin-left: 20px;
+}
