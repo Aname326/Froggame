@@ -18,16 +18,16 @@
         <h2>
             player ID:
         </h2>
-        <input> 
+        <input id="idInput"> 
 
-        <button>submit</button>
+        <button onclick="showButtons()" id="submitButton">submit</button>
     </div>
 
 
 
 
 
-
+    <br><br>
 
     <!--chapter buttons-->
     <div id="buttons">
@@ -100,6 +100,10 @@
     var buttons = document.getElementById("buttons")
 
     buttons.style.display = "none"
+
+    function showButtons() {
+        buttons.style.display = "block"
+    }
 </script>
 
 </html>

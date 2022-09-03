@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-.buttons {
+#buttons {
   text-align: center;
   transition-duration: .60s;
 }
