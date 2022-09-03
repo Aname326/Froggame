@@ -23,7 +23,7 @@
             <!--everything in this div tag will disappear when createBtn or loginBtn is clicked-->
             <input id="idInput"> 
 
-            <button onclick="create()" id="createBtn">
+            <button id="createBtn">
                 create
             </button>
 
@@ -147,13 +147,27 @@
         buttons.style.display = "block"
         playerInput.style.display = "none"
 
+        console.log(idInput.value)
+        var playerId = idInput.value
+       
+        set(ref(db, "Users/" + idInput.value), {
+            Name: idInput.value,
+            ID: idInput.value,
+            Highscore: 0
+        })
 
+        .catch((error) => {
+           alert(error)
+           // allows to catch any error 
+       });
     }
 
     function login() {
         buttons.style.display = "block"
         playerInput.style.display = "none"
     }
+
+    createBtn.addEventListener('click', create)
 </script>
 
 </html>
