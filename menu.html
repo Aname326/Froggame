@@ -27,7 +27,7 @@
                 create
             </button>
 
-            <button id="loginBtn">
+            <button id="loginBtn" onclick="login()">
                 login
             </button>
         </div>
@@ -122,7 +122,10 @@
 
     }
 
-    
+    function login() {
+        buttons.style.display = "block"
+        playerInput.style.display = "none"
+    }
 </script>
 
 </html>
