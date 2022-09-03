@@ -15,7 +15,7 @@
         <br><br>
 
 
-        <input placeholder="User ID" class="loginId">
+        <input placeholder="User ID" id="loginId">
         <br><br>
 
         <button id="loginBtn">Login</button>
@@ -106,12 +106,12 @@
    function login() {
        const dbref = ref(db);
 
-       get(child(dbref), "Users/" + loginId.value)
+       get(child(dbref, "Users/" + loginId.value))
 
        .then((snapshot) => {
            if (snapshot.exists()) {
-               showName.innerHTML = "Name:" + snapshot.val().Name;
-               showHighscore.innerHTML = "Highscore" + snapshot.val().Highscore;
+               showName.innerHTML = "Name: " + snapshot.val().Name;
+               showHighscore.innerHTML = "Highscore: " + snapshot.val().Highscore;
            } else {
                alert("data not found");
            }
