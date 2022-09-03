@@ -18,9 +18,18 @@
         <h2>
             player ID:
         </h2>
-        <input id="idInput"> 
 
-        <button onclick="showButtons()" id="submitButton">submit</button>
+        <div id="playerInput">
+            <input id="idInput"> 
+
+            <button onclick="showButtons()" id="createBtn">
+                create
+            </button>
+
+            <button id="loginBtn">
+                login
+            </button>
+        </div>
     </div>
 
 
@@ -99,14 +108,16 @@
 <script>
     var buttons = document.getElementById("buttons")
     var idInput = document.getElementById("idInput")
-    var submitButton = document.getElementById("submitButton")
+    var createBtn = document.getElementById("createBtn")
+    var loginBtn = document.getElementById("loginBtn")
+    var playerInput = document.getElementById("playerInput")
 
     buttons.style.display = "none"
 
     function showButtons() {
         buttons.style.display = "block"
-        idInput.style.display = "none"
-        submitButton.style.display = "none"
+        playerInput.style.display = "none"
+
 
     }
 </script>
