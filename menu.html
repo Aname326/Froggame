@@ -23,7 +23,7 @@
             <!--everything in this div tag will disappear when createBtn or loginBtn is clicked-->
             <input id="idInput"> 
 
-            <button onclick="showButtons()" id="createBtn">
+            <button onclick="create()" id="createBtn">
                 create
             </button>
 
@@ -115,12 +115,14 @@
 
     buttons.style.display = "none"
 
-    function showButtons() {
+    function create() {
         buttons.style.display = "block"
         playerInput.style.display = "none"
 
 
     }
+
+    
 </script>
 
 </html>
