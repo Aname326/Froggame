@@ -148,11 +148,11 @@
     buttons.style.display = "none"
 
     function create() {
-        buttons.style.display = "block"
-        playerInput.style.display = "none"
+        buttons.style.display = "block";
+        playerInput.style.display = "none";
 
         console.log(idInput.value)
-        var playerId = idInput.value
+        playerId.innerHTML = "player ID: " + idInput.value
        
         set(ref(db, "Users/" + idInput.value), {
             Name: idInput.value,
