@@ -15,7 +15,7 @@
     </h1>
 
     <div class="playerInfo">
-        <h2>
+        <h2 id="playerId">
             player ID:
         </h2>
 
@@ -27,10 +27,12 @@
                 create
             </button>
 
-            <button id="loginBtn" onclick="login()">
+            <button id="loginBtn">
                 login
             </button>
         </div>
+
+        <h2 id="playerName"></h2>
     </div>
 
 
@@ -140,6 +142,8 @@
     var createBtn = document.getElementById("createBtn")
     var loginBtn = document.getElementById("loginBtn")
     var playerInput = document.getElementById("playerInput")
+    var playerId = document.getElementById("playerId")
+    var playerName = document.getElementById("playerName")
 
     buttons.style.display = "none"
 
@@ -163,11 +167,31 @@
     }
 
     function login() {
-        buttons.style.display = "block"
-        playerInput.style.display = "none"
+
+
+        const dbref = ref(db);
+
+       get(child(dbref, "Users/" + idInput.value))
+
+       .then((snapshot) => {
+           if (snapshot.exists()) {
+               playerName.innerHTML = "player name: " + snapshot.val().Name;
+               playerId.innerHTML = "player ID: " + snapshot.val().ID;
+               buttons.style.display = "block";
+               playerInput.style.display = "none";
+               
+           } else {
+               alert("data not found");
+           }
+       })
+
+       .catch((error) => {
+           alert(error)
+       })
     }
 
     createBtn.addEventListener('click', create)
+    loginBtn.addEventListener('click', login)
 </script>
 
 </html>
