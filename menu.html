@@ -148,22 +148,30 @@
     buttons.style.display = "none"
 
     function create() {
-        buttons.style.display = "block";
-        playerInput.style.display = "none";
 
-        console.log(idInput.value)
-        playerId.innerHTML = "player ID: " + idInput.value
-       
-        set(ref(db, "Users/" + idInput.value), {
-            Name: idInput.value,
-            ID: idInput.value,
-            Highscore: 0
-        })
+        if (playerInput.value == "") {
+            alert("Please enter an ID");
 
-        .catch((error) => {
-           alert(error)
-           // allows to catch any error 
-       });
+        } else {
+            buttons.style.display = "block";
+            playerInput.style.display = "none";
+
+            console.log(idInput.value)
+            playerId.innerHTML = "player ID: " + idInput.value
+        
+            set(ref(db, "Users/" + idInput.value), {
+                Name: idInput.value,
+                ID: idInput.value,
+                Highscore: 0
+            })
+            .catch((error) => {
+                alert(error)
+                // allows to catch any error 
+            });
+
+        }
+        
+        
     }
 
     function login() {
