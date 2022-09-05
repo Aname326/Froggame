@@ -36,6 +36,7 @@
             <h2 id="playerName"></h2>
 
             <input id="nameInput" placeholder="player name">
+            <button id="nameBtn">submit</button>
         </div>
         
     </div>
@@ -150,6 +151,7 @@
     var playerId = document.getElementById("playerId")
     var playerName = document.getElementById("playerName")
     var playerNameInput = document.getElementById("playerNameInput")
+    var nameBtn = document.getElementById("nameBtn")
 
     buttons.style.display = "none"
     playerNameInput.style.display = "none"
@@ -158,6 +160,7 @@
 
 
             buttons.style.display = "block";
+            playerNameInput.style.display = "block";
             playerInput.style.display = "none";
 
             console.log(idInput.value)
