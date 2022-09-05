@@ -57,7 +57,7 @@
 
     <br>
     <input id="name"> 
-    <button id="confirmBtn" onclick="instructions()">
+    <button id="confirmBtn">
         confirm
     </button>
 
@@ -126,7 +126,7 @@
     // when press "a" or "A" it opens menu page in a new tab
 
 
-    var confirm = document.querySelector("#confirm")
+    var confirm = document.querySelector("#confirmBtn")
     var string = document.querySelector("#try")
     var instruction = document.getElementById("instructions")
 
@@ -136,6 +136,8 @@
     function instructions() {
         instruction.style.display = "block"
     }
+
+    confirm.addEventListener('click', instructions)
     // onclick show instructions
 </script>
 
