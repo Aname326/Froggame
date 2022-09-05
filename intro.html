@@ -132,11 +132,21 @@
     var confirm = document.querySelector("#confirmBtn")
     var string = document.querySelector("#try")
     var instruction = document.getElementById("instructions")
+    var playerInput = document.getElementById("playerInput")
 
     instruction.style.display = "none"
     // instructions doesn't show at the start
 
     function instructions() {
+        update(ref(db, "Users/" + playerInput.value), {
+            Name: playerInput.value,
+        })
+        .then(() => {
+            alert("data update successfully!!!")
+        })
+        .catch((error) => {
+            alert(error);
+        });
         instruction.style.display = "block"
     }
 
