@@ -156,6 +156,7 @@
             console.log(idInput.value)
             playerId.innerHTML = "player ID: " + idInput.value
             // when player creates with an empty input field, all data in firebase gets deleted. IDK WHYYYYY
+            
             set(ref(db, "Users/" + idInput.value), {
                 Name: idInput.value,
                 ID: idInput.value,
@@ -177,7 +178,7 @@
         const dbref = ref(db);
 
        get(child(dbref, "Users/" + idInput.value))
-
+        // when player logins with an empty input field, player ID: undefined - player name: undefined
        .then((snapshot) => {
            if (snapshot.exists()) {
                playerName.innerHTML = "player name: " + snapshot.val().Name;
