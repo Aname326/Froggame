@@ -155,7 +155,7 @@
 
             console.log(idInput.value)
             playerId.innerHTML = "player ID: " + idInput.value
-        
+            // when player creates with an empty input field, all data in firebase gets deleted. IDK WHYYYYY
             set(ref(db, "Users/" + idInput.value), {
                 Name: idInput.value,
                 ID: idInput.value,
