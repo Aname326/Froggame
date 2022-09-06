@@ -154,6 +154,7 @@
     var playerNameInput = document.getElementById("playerNameInput")
     var nameBtn = document.getElementById("nameBtn")
     var createName = document.getElementById("createName")
+    var nameInput = document.getElementById("nameInput")
 
 
     buttons.style.display = "none"
@@ -217,8 +218,24 @@
        })
     }
 
+    function addName() {
+        console.log(nameInput.value)
+
+        update(ref(db, "Users/" + nameInput.value), {
+            Name: nameInput.value,
+        })
+        .then(() => {
+            playerName.innerHTML = "player name: " + nameInput.value
+            playerNameInput.style.display = "none"
+        })
+        .catch((error) => {
+            alert(error);
+        });
+    }
+
     createBtn.addEventListener('click', create)
     loginBtn.addEventListener('click', login)
+    nameBtn.addEventListener('click', addName)
 </script>
 
 </html>
