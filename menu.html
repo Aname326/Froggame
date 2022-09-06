@@ -219,7 +219,6 @@
     }
 
     function addName() {
-        console.log(nameInput.value)
 
         update(ref(db, "Users/" + nameInput.value), {
             Name: nameInput.value,
