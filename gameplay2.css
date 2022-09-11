@@ -40,10 +40,9 @@ body {
 
 .leftArrow {
     width: 150px;
-    left: 396px;
+    left: 456px;
     position: fixed;
-    bottom: 40px;
-    z-index: -2;
+    bottom: 540px;
 }
 
 .upArrow {
