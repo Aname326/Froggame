@@ -81,6 +81,7 @@ body {
     animation-iteration-count: infinite;
     position: fixed;
     bottom: 70px;
+    left: 5px;
 }
 
 
