@@ -1,30 +1,6 @@
 body {
-    background-image: url("greenbackground2.jpeg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: #C0DCC8
 
-}
-
-
-.pleasantratebar {
-    margin: 0;
-    border: 0;
-    float: right;
-    margin-right: 5%;
-    width: auto;
-    height: auto;
-    opacity: 0.8;
-    z-index: 1;
-}
-
-.pleasantRateBarFilled {
-    float: right;
-    z-index: 0;
-    margin-left: 7.1%;
-    width: 1093px;
-    opacity: 0.6;
-    position: absolute;
 }
 
 .buttonreturn {
@@ -43,36 +19,6 @@ body {
     cursor: pointer;
 }
 /* shadow and pointer cursor when hover */
-
-.notebubbleLeft {
-    width: 250px;
-    position: fixed;
-    left: 348px;
-    z-index: -1;
-
-}
-/* the bigger the z-index element goes in front of everything else */
-
-.notebubbleUp {
-    width: 250px;
-    position: fixed;
-    left: 502px;
-    z-index: -1;
-}
-
-.notebubbleDown {
-    width: 250px;
-    position: fixed;
-    left: 650px;
-    z-index: -1;
-}
-
-.notebubbleRight {
-    width: 250px;
-    position: fixed;
-    left: 802px;
-    z-index: -1;
-}
 
 .singingfrog {
     width: 400px;
