@@ -63,8 +63,14 @@
     game.style.display = "none"
 
     function start() {
-        game.style.display = "block"
-        idInputDiv.style.display = "none"
+
+        if (idInput.value == "" | idInput.value == null) {
+            alert("Please enter your user ID")
+        } else {
+            game.style.display = "block"
+            idInputDiv.style.display = "none"
+        }
+        
     }
 
     confirmID.addEventListener('click', start)
