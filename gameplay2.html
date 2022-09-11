@@ -15,9 +15,9 @@
 </a>
 <!--return button that leads to menu page-->
 
-<div id="idInput">
+<div id="idInputDiv">
     <h2>Please enter your user ID</h2>
-    <input>
+    <input id="idInput">
     <button id="confirmID">confirm</button>
 </div>
 
@@ -57,13 +57,14 @@
     var game = document.getElementById("game")
     var confirmID = document.getElementById("confirmID")
     var idInput = document.getElementById("idInput")
+    var idInputDiv = document.getElementById("idInputDiv")
 
 
     game.style.display = "none"
 
     function start() {
         game.style.display = "block"
-        idInput.style.display = "none"
+        idInputDiv.style.display = "none"
     }
 
     confirmID.addEventListener('click', start)
