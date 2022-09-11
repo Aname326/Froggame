@@ -42,29 +42,29 @@ body {
     width: 150px;
     left: 456px;
     position: fixed;
-    bottom: 540px;
+    bottom: 260px;
 }
 
 .upArrow {
     width: 150px;
-    left: 547px;
+    left: 456px;
     position: fixed;
-    bottom: 40px;
-    z-index: -2;
+    bottom: 540px;
+
 }
 
 .downArrow {
     width: 150px;
-    left: 698px;
+    left: 748px;
     position: fixed;
-    bottom: 40px;
-    z-index: -2;
+    bottom: 540px;
+
 }
 
 .rightArrow {
     width: 150px;
-    left: 852px;
+    left: 748px;
     position: fixed;
-    bottom: 40px;
-    z-index: -2;
+    bottom: 260px;
+
 }
