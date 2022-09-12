@@ -51,6 +51,7 @@ body {
     left: 456px;
     position: fixed;
     bottom: 540px;
+    border-radius: 50%;
 
 }
 
@@ -59,7 +60,7 @@ body {
     left: 748px;
     position: fixed;
     bottom: 540px;
-
+    border-radius: 50%;
 }
 
 #rightArrow {
@@ -67,7 +68,7 @@ body {
     left: 748px;
     position: fixed;
     bottom: 260px;
-
+    border-radius: 50%;
 }
 
 #idInputDiv {
