@@ -99,9 +99,15 @@
         if (idInput.value == "" | idInput.value == null) {
             alert("Please enter your user ID")
         } else {
-            game.style.display = "block"
-            idInputDiv.style.display = "none"
-            var userID = idInput.value
+            get(child(dbref, "Users/" + idInput.value))
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    game.style.display = "block"
+                    idInputDiv.style.display = "none"
+                    var userID = idInput.value
+                }
+            })
+            
         }
         
     }
