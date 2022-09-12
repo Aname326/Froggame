@@ -109,10 +109,7 @@
                     game.style.display = "block"
                     idInputDiv.style.display = "none"
                     var userID = idInput.value
-                    upArrowGame()
-                    downArrowGame()
-                    leftArrowGame()
-                    rightArrowGame()
+                    arrowList [Math.random() * 4]
                 }
             })
             
@@ -124,19 +121,33 @@
 
     function upArrowGame() {
         upArrow.style.boxShadow = "0px 0px 30px blue";
+        downArrow.style.boxShadow = "none"
+        leftArrow.style.boxShadow = "none"
+        rightArrow.style.boxShadow = "none"
     }
 
     function downArrowGame() {
         downArrow.style.boxShadow = "0px 0px 30px blue";
+        upArrow.style.boxShadow = "none"
+        leftArrow.style.boxShadow = "none"
+        rightArrow.style.boxShadow = "none"
     }
 
     function leftArrowGame() {
         leftArrow.style.boxShadow = "0px 0px 30px blue";
+        downArrow.style.boxShadow = "none"
+        upArrow.style.boxShadow = "none"
+        rightArrow.style.boxShadow = "none"
     }
 
     function rightArrowGame() {
         rightArrow.style.boxShadow = "0px 0px 30px blue";
+        downArrow.style.boxShadow = "none"
+        leftArrow.style.boxShadow = "none"
+        upArrow.style.boxShadow = "none"
     }
+
+    var arrowList = [upArrowGame(), downArrowGame(),leftArrowGame(),rightArrowGame()]
 </script>
 
 
