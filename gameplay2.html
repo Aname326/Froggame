@@ -109,6 +109,7 @@
                     game.style.display = "block"
                     idInputDiv.style.display = "none"
                     var userID = idInput.value
+                    upArrowGame()
                 }
             })
             
@@ -118,8 +119,8 @@
 
     confirmID.addEventListener('click', start)
 
-    function upArrow() {
-        
+    function upArrowGame() {
+        upArrow.style.boxShadow = "10px 10px 10px blue";
     }
 </script>
 
