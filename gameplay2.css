@@ -38,14 +38,14 @@ body {
     bottom: 50px;
 }
 
-.leftArrow {
+#leftArrow {
     width: 150px;
     left: 456px;
     position: fixed;
     bottom: 260px;
 }
 
-.upArrow {
+#upArrow {
     width: 150px;
     left: 456px;
     position: fixed;
@@ -53,7 +53,7 @@ body {
 
 }
 
-.downArrow {
+#downArrow {
     width: 150px;
     left: 748px;
     position: fixed;
@@ -61,7 +61,7 @@ body {
 
 }
 
-.rightArrow {
+#rightArrow {
     width: 150px;
     left: 748px;
     position: fixed;
