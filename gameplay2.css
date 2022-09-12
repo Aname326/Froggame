@@ -43,6 +43,7 @@ body {
     left: 456px;
     position: fixed;
     bottom: 260px;
+    border-radius: 50%;
 }
 
 #upArrow {
