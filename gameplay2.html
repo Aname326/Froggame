@@ -148,6 +148,30 @@
     }
 
     var arrowList = [upArrowGame(), downArrowGame(),leftArrowGame(),rightArrowGame()]
+
+    document.addEventListener('keydown',(game) => {
+        var arrow = event.key;
+
+
+        if (arrow == "ArrowUp") {
+            if (upArrow.style.boxShadow = "0px 0px 30px blue") {
+                alert("corect")
+            }
+        } 
+        else if (arrow == "ArrowDown") {
+            if (downArrow.style.boxShadow = "0px 0px 30px blue") {
+                alert("corect")
+            }
+        } else if (arrow == "ArrowLeft") {
+            if (leftArrow.style.boxShadow = "0px 0px 30px blue") {
+                alert("corect")
+            }
+        } else if (arrow == "ArrowRight") {
+            if (rightArrow.style.boxShadow = "0px 0px 30px blue") {
+                alert("corect")
+            }
+        }
+    })
 </script>
 
 
