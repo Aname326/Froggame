@@ -92,6 +92,7 @@
     var downArrow = document.getElementById("downArrow")
     var leftArrow = document.getElementById("leftArrow")
     var rightArrow = document.getElementById("rightArrow")
+    var whichArrow
 
     const dbref = ref(db)
 
@@ -124,6 +125,7 @@
         downArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
+        whichArrow = 1
     }
 
     function downArrowGame() {
@@ -131,6 +133,7 @@
         upArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
+        whichArrow = 2
     }
 
     function leftArrowGame() {
@@ -138,6 +141,7 @@
         downArrow.style.boxShadow = "none"
         upArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
+        whichArrow = 3
     }
 
     function rightArrowGame() {
@@ -145,6 +149,7 @@
         downArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         upArrow.style.boxShadow = "none"
+        whichArrow = 4
     }
 
     var arrowList = [upArrowGame(), downArrowGame(),leftArrowGame(),rightArrowGame()]
@@ -154,20 +159,21 @@
 
 
         if (arrow == "ArrowUp") {
-            if (upArrow.style.boxShadow = "0px 0px 30px blue") {
+            if (whichArrow = 1) {
                 alert("corect")
+                arrowList [0]
             }
         } 
         else if (arrow == "ArrowDown") {
-            if (downArrow.style.boxShadow = "0px 0px 30px blue") {
+            if (whichArrow = 2) {
                 alert("corect")
             }
         } else if (arrow == "ArrowLeft") {
-            if (leftArrow.style.boxShadow = "0px 0px 30px blue") {
+            if (whichArrow = 3) {
                 alert("corect")
             }
         } else if (arrow == "ArrowRight") {
-            if (rightArrow.style.boxShadow = "0px 0px 30px blue") {
+            if (whichArrow = 4) {
                 alert("corect")
             }
         }
