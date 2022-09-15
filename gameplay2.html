@@ -92,7 +92,7 @@
     var downArrow = document.getElementById("downArrow")
     var leftArrow = document.getElementById("leftArrow")
     var rightArrow = document.getElementById("rightArrow")
-    var whichArrow
+    var whichArrow = Math.floor(Math.random() * 4)
 
     const dbref = ref(db)
 
@@ -110,7 +110,7 @@
                     game.style.display = "block"
                     idInputDiv.style.display = "none"
                     var userID = idInput.value
-                    arrowList [Math.random() * 4]
+                    arrowList [whichArrow]
                 }
             })
             
@@ -160,8 +160,7 @@
 
         if (arrow == "ArrowUp") {
             if (whichArrow = 1) {
-                alert("corect")
-                arrowList [0]
+                arrowList [whichArrow]
             }
         } 
         else if (arrow == "ArrowDown") {
