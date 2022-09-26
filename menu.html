@@ -157,7 +157,7 @@
      var nameBtn = document.getElementById("nameBtn")
      var createName = document.getElementById("createName")
      var nameInput = document.getElementById("nameInput")
-     var storeid
+     let storeid
 
      
  
@@ -176,7 +176,7 @@
  
  
                  playerId.innerHTML = "player ID: " + idInput.value
-                 var storeid = idInput.value
+                 let storeid = idInput.value
                 console.log(storeid)
                  
                  set(ref(db, "Users/" + idInput.value), {
@@ -207,7 +207,7 @@
         get(child(dbref, "Users/" + idInput.value))
          
         .then((snapshot) => {
-            var storeid = idInput.value
+            let storeid = idInput.value
             console.log(storeid)
 
             if (snapshot.exists()) {
