@@ -179,7 +179,7 @@
                  // when player creates with an empty input field, all data in firebase gets deleted. IDK WHYYYYY
                  
                  set(ref(db, "Users/" + idInput.value), {
-                     Name: idInput.value,
+                     Name: "-",
                      ID: idInput.value,
                      Highscore: 0
                  })
