@@ -92,8 +92,7 @@
     var downArrow = document.getElementById("downArrow")
     var leftArrow = document.getElementById("leftArrow")
     var rightArrow = document.getElementById("rightArrow")
-    var whichArrow 
-    var lightArrow = Math.floor(Math.random() * 4)
+
 
     const dbref = ref(db)
 
@@ -126,7 +125,7 @@
         downArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
-        whichArrow = 1
+
     }
 
     function downArrowGame() {
@@ -134,7 +133,7 @@
         upArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
-        whichArrow = 2
+
     }
 
     function leftArrowGame() {
@@ -142,7 +141,7 @@
         downArrow.style.boxShadow = "none"
         upArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
-        whichArrow = 3
+
     }
 
     function rightArrowGame() {
@@ -150,34 +149,17 @@
         downArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         upArrow.style.boxShadow = "none"
-        whichArrow = 4
+
     }
 
-    var arrowList = [upArrowGame(), downArrowGame(),leftArrowGame(),rightArrowGame()]
+    
     
 
     document.addEventListener('keydown',(game) => {
         var arrow = event.key;
 
 
-        if (arrow == "ArrowUp") {
-            if (whichArrow = 1) {
-                alert("correct")
-            }
-        } 
-        else if (arrow == "ArrowDown") {
-            if (whichArrow = 2) {
-                alert("corect")
-            }
-        } else if (arrow == "ArrowLeft") {
-            if (whichArrow = 3) {
-                alert("corect")
-            }
-        } else if (arrow == "ArrowRight") {
-            if (whichArrow = 4) {
-                alert("corect")
-            }
-        }
+        
     })
 </script>
 
