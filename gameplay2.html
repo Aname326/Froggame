@@ -110,7 +110,7 @@
                     game.style.display = "block"
                     idInputDiv.style.display = "none"
                     var userID = idInput.value
-                    arrowList [whichArrow]
+                    arrowList [1]
                 }
             })
             
@@ -152,7 +152,7 @@
         window.arrowLit = 4
     }
 
-    var arrowList = [upArrowGame(), downArrowGame(), leftArrowGame(), rightArrowGame()]
+    var arrowList = [upArrowGame, downArrowGame, leftArrowGame, rightArrowGame]
     
 
     document.addEventListener('keydown',(game) => {
