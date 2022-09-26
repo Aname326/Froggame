@@ -93,6 +93,7 @@
     var leftArrow = document.getElementById("leftArrow")
     var rightArrow = document.getElementById("rightArrow")
     window.arrowLit = 0
+    var whichArrow = Math.floor(Math.random()*4)
 
     const dbref = ref(db)
 
@@ -110,7 +111,7 @@
                     game.style.display = "block"
                     idInputDiv.style.display = "none"
                     var userID = idInput.value
-                    arrowList [1]
+                    arrowList [whichArrow]
                 }
             })
             
@@ -169,7 +170,7 @@
         } else if (arrow == "ArrowDown") {
 
         } else if (arrow == "ArrowRight") {
-            
+
         }
         
     })
