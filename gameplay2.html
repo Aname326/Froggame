@@ -92,7 +92,7 @@
     var downArrow = document.getElementById("downArrow")
     var leftArrow = document.getElementById("leftArrow")
     var rightArrow = document.getElementById("rightArrow")
-
+    window.arrowLit = 0
 
     const dbref = ref(db)
 
@@ -125,7 +125,7 @@
         downArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
-
+        window.arrowLit = 1
     }
 
     function downArrowGame() {
@@ -133,7 +133,7 @@
         upArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
-
+        window.arrowLit = 2
     }
 
     function leftArrowGame() {
@@ -141,7 +141,7 @@
         downArrow.style.boxShadow = "none"
         upArrow.style.boxShadow = "none"
         rightArrow.style.boxShadow = "none"
-
+        window.arrowLit = 3
     }
 
     function rightArrowGame() {
@@ -149,16 +149,22 @@
         downArrow.style.boxShadow = "none"
         leftArrow.style.boxShadow = "none"
         upArrow.style.boxShadow = "none"
-
+        window.arrowLit = 4
     }
 
     var arrowList = [upArrowGame(), downArrowGame(), leftArrowGame(), rightArrowGame()]
     
 
     document.addEventListener('keydown',(game) => {
-        var arrow = event.key;
+        var arrow = game.key;
 
+        if (arrow == "ArrowLeft") {
+            if (window.arrowLit == 3) {
 
+            } else {
+                
+            }
+        }
         
     })
 </script>
