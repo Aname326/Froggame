@@ -146,18 +146,18 @@
  
      // firebase setup code ends here
  
-     var buttons = document.getElementById("buttons")
-     var idInput = document.getElementById("idInput")
-     var createBtn = document.getElementById("createBtn")
-     var loginBtn = document.getElementById("loginBtn")
-     var playerInput = document.getElementById("playerInput")
-     var playerId = document.getElementById("playerId")
-     var playerName = document.getElementById("playerName")
-     var playerNameInput = document.getElementById("playerNameInput")
-     var nameBtn = document.getElementById("nameBtn")
-     var createName = document.getElementById("createName")
-     var nameInput = document.getElementById("nameInput")
-     let storeid
+     var buttons = document.getElementById("buttons");
+     var idInput = document.getElementById("idInput");
+     var createBtn = document.getElementById("createBtn");
+     var loginBtn = document.getElementById("loginBtn");
+     var playerInput = document.getElementById("playerInput");
+     var playerId = document.getElementById("playerId");
+     var playerName = document.getElementById("playerName");
+     var playerNameInput = document.getElementById("playerNameInput");
+     var nameBtn = document.getElementById("nameBtn");
+     var createName = document.getElementById("createName");
+     var nameInput = document.getElementById("nameInput");
+  
 
      
  
@@ -175,9 +175,9 @@
                  playerInput.style.display = "none";
  
  
-                 playerId.innerHTML = "player ID: " + idInput.value
-                const storeid = idInput.value
-                console.log(storeid)
+                 playerId.innerHTML = "player ID: " + idInput.value;
+                window.storeid = idInput.value;
+                console.log(storeid);
                  
                  set(ref(db, "Users/" + idInput.value), {
                      Name: "-",
@@ -207,8 +207,8 @@
         get(child(dbref, "Users/" + idInput.value))
          
         .then((snapshot) => {
-            let storeid = idInput.value
-            console.log(storeid)
+            window.storeid = idInput.value;
+            console.log(storeid);
 
             if (snapshot.exists()) {
                 if (snapshot.val().Name == "-") {
