@@ -176,7 +176,7 @@
  
  
                  playerId.innerHTML = "player ID: " + idInput.value
-                 let storeid = idInput.value
+                const storeid = idInput.value
                 console.log(storeid)
                  
                  set(ref(db, "Users/" + idInput.value), {
@@ -247,6 +247,20 @@
              alert(error);
          });
      }
+
+     function checkVar() {
+         console.log(storeid)
+     }
+
+     document.addEventListener('keyup',(showConsole) => {
+        var check = showConsole.key;
+
+
+        if (check === "c") {
+            console.log(storeid)
+        } 
+ 
+    })
  
      createBtn.addEventListener('click', create)
      loginBtn.addEventListener('click', login)
