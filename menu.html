@@ -177,6 +177,7 @@
  
                  playerId.innerHTML = "player ID: " + idInput.value
                  var storeid = idInput.value
+                console.log(storeid)
                  
                  set(ref(db, "Users/" + idInput.value), {
                      Name: "-",
@@ -200,12 +201,15 @@
  
  
          const dbref = ref(db);
-        var storeid = idInput.value
+   
 
  
         get(child(dbref, "Users/" + idInput.value))
          
         .then((snapshot) => {
+            var storeid = idInput.value
+            console.log(storeid)
+
             if (snapshot.exists()) {
                 if (snapshot.val().Name == "-") {
                     playerId.innerHTML = "player ID: " + snapshot.val().ID;
@@ -230,7 +234,8 @@
      }
  
      function addName() {
- 
+        console.log(storeid)
+
          update(ref(db, "Users/" + storeid), {
              Name: nameInput.value,
          })
