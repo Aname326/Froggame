@@ -177,7 +177,7 @@
  
                  playerId.innerHTML = "player ID: " + idInput.value;
                 window.storeid = idInput.value;
-                console.log(storeid);
+
                  
                  set(ref(db, "Users/" + idInput.value), {
                      Name: "-",
@@ -208,7 +208,6 @@
          
         .then((snapshot) => {
             window.storeid = idInput.value;
-            console.log(storeid);
 
             if (snapshot.exists()) {
                 if (snapshot.val().Name == "-") {
@@ -234,7 +233,6 @@
      }
  
      function addName() {
-        console.log(storeid)
 
          update(ref(db, "Users/" + storeid), {
              Name: nameInput.value,
@@ -248,19 +246,6 @@
          });
      }
 
-     function checkVar() {
-         console.log(storeid)
-     }
-
-     document.addEventListener('keyup',(showConsole) => {
-        var check = showConsole.key;
-
-
-        if (check === "c") {
-            console.log(storeid)
-        } 
- 
-    })
  
      createBtn.addEventListener('click', create)
      loginBtn.addEventListener('click', login)
