@@ -157,15 +157,15 @@
      var nameBtn = document.getElementById("nameBtn")
      var createName = document.getElementById("createName")
      var nameInput = document.getElementById("nameInput")
+     var storeid
+
+     
  
  
      buttons.style.display = "none"
      playerNameInput.style.display = "none"
  
-     function create() {
- 
- 
-             
+     function create() {    
              if (idInput.value == "" || idInput.value == null) {
                  alert ("the input field is emptyyyy")
                  
@@ -176,6 +176,7 @@
  
  
                  playerId.innerHTML = "player ID: " + idInput.value
+                 var storeid = idInput.value
                  // when player creates with an empty input field, all data in firebase gets deleted. IDK WHYYYYY
                  
                  set(ref(db, "Users/" + idInput.value), {
@@ -200,6 +201,8 @@
  
  
          const dbref = ref(db);
+        var storeid = idInput.value
+        console.log(storeid)
  
         get(child(dbref, "Users/" + idInput.value))
          
