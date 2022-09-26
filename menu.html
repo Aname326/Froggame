@@ -231,7 +231,7 @@
  
      function addName() {
  
-         update(ref(db, "Users/" + storeid.value), {
+         update(ref(db, "Users/" + storeid), {
              Name: nameInput.value,
          })
          .then(() => {
