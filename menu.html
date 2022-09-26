@@ -205,10 +205,17 @@
          
         .then((snapshot) => {
             if (snapshot.exists()) {
-                playerName.innerHTML = "player name: " + snapshot.val().Name;
-                playerId.innerHTML = "player ID: " + snapshot.val().ID;
-                buttons.style.display = "block";
-                playerInput.style.display = "none";
+                if (snapshot.val().Name == "-") {
+                    playerId.innerHTML = "player ID: " + snapshot.val().ID;
+                    buttons.style.display = "block";
+                    playerInput.style.display = "none";
+                    playerNameInput.style.display = "block"
+                } else {
+                    playerName.innerHTML = "player name: " + snapshot.val().Name;
+                    playerId.innerHTML = "player ID: " + snapshot.val().ID;
+                    buttons.style.display = "block";
+                    playerInput.style.display = "none";
+                }
                 
             } else {
                 alert("data not found");
