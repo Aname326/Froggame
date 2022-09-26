@@ -177,7 +177,6 @@
  
                  playerId.innerHTML = "player ID: " + idInput.value
                  var storeid = idInput.value
-                 // when player creates with an empty input field, all data in firebase gets deleted. IDK WHYYYYY
                  
                  set(ref(db, "Users/" + idInput.value), {
                      Name: "-",
@@ -202,7 +201,7 @@
  
          const dbref = ref(db);
         var storeid = idInput.value
-        console.log(storeid)
+
  
         get(child(dbref, "Users/" + idInput.value))
          
