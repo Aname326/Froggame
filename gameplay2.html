@@ -92,7 +92,8 @@
     var downArrow = document.getElementById("downArrow")
     var leftArrow = document.getElementById("leftArrow")
     var rightArrow = document.getElementById("rightArrow")
-    var whichArrow = Math.floor(Math.random() * 4)
+    var whichArrow 
+    var lightArrow = Math.floor(Math.random() * 4)
 
     const dbref = ref(db)
 
@@ -153,6 +154,7 @@
     }
 
     var arrowList = [upArrowGame(), downArrowGame(),leftArrowGame(),rightArrowGame()]
+    
 
     document.addEventListener('keydown',(game) => {
         var arrow = event.key;
@@ -160,7 +162,7 @@
 
         if (arrow == "ArrowUp") {
             if (whichArrow = 1) {
-                arrowList [whichArrow]
+                alert("correct")
             }
         } 
         else if (arrow == "ArrowDown") {
