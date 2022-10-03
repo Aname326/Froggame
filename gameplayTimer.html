@@ -87,10 +87,14 @@
      // firebase setup code ends here
 
     var game = document.getElementById("game")
+
+    // database variables
     var confirmID = document.getElementById("confirmID")
     var idInput = document.getElementById("idInput")
     var idInputDiv = document.getElementById("idInputDiv")
     var userID
+
+    // arrow gameplay variables
     var upArrow = document.getElementById("upArrow")
     var downArrow = document.getElementById("downArrow")
     var leftArrow = document.getElementById("leftArrow")
@@ -100,6 +104,8 @@
     let listLen = arrowList.length
     var score = 0
     var scoreShow = document.getElementById("scoreShow")
+
+    // timer variables
     
 
     const dbref = ref(db)
