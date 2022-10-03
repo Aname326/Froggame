@@ -108,6 +108,8 @@
     var divUp = document.getElementById("divUp")
     var divDown = document.getElementById("divDown")
     window.arrowLit = 0
+    let arrowList = [upArrowGame, downArrowGame, leftArrowGame, rightArrowGame]
+    let listLen = arrowList.length
     
 
     const dbref = ref(db)
@@ -115,27 +117,6 @@
 
     game.style.display = "none"
 
-    function start() {
-
-        if (idInput.value == "" | idInput.value == null) {
-            alert("Please enter your user ID")
-        } else {
-            get(child(dbref, "Users/" + idInput.value))
-            .then((snapshot) => {
-                if (snapshot.exists()) {
-                    game.style.display = "block"
-                    idInputDiv.style.display = "none"
-                    var userID = idInput.value
-                    let arrowList = Math.floor(Math.random() * whichArrow)
-                    console.log(whichArrow)
-                }
-            })
-            
-        }
-        
-    }
-
-    confirmID.addEventListener('click', start)
 
     function upArrowGame() {
         upArrow.style.boxShadow = "0px 0px 30px blue";
@@ -169,8 +150,35 @@
         window.arrowLit = 4
     }
 
-    let arrowList = [upArrowGame, downArrowGame, leftArrowGame, rightArrowGame]
-    let whichArrow = arrowList.length
+
+    function randomNum() {
+        return Math.floor( Math.random() * 4);
+    }
+
+
+    function start() {
+
+        if (idInput.value == "" | idInput.value == null) {
+            alert("Please enter your user ID")
+        } else {
+            get(child(dbref, "Users/" + idInput.value))
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    game.style.display = "block"
+                    idInputDiv.style.display = "none"
+                    var userID = idInput.value
+                    arrowList[randomNum(listLen)]()
+                    
+                }
+            })
+            
+        }
+        
+    }
+
+    confirmID.addEventListener('click', start)
+
+  
 
     document.addEventListener('keydown',(game) => {
         var arrow = game.key;
