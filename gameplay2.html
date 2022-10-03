@@ -108,7 +108,7 @@
     var divUp = document.getElementById("divUp")
     var divDown = document.getElementById("divDown")
     window.arrowLit = 0
-    var whichArrow = Math.floor(Math.random()*4)
+    
 
     const dbref = ref(db)
 
@@ -126,7 +126,8 @@
                     game.style.display = "block"
                     idInputDiv.style.display = "none"
                     var userID = idInput.value
-                    arrowList [whichArrow]
+                    let arrowList = Math.floor(Math.random() * whichArrow)
+                    console.log(whichArrow)
                 }
             })
             
@@ -168,8 +169,8 @@
         window.arrowLit = 4
     }
 
-    var arrowList = [upArrowGame, downArrowGame, leftArrowGame, rightArrowGame]
-    
+    let arrowList = [upArrowGame, downArrowGame, leftArrowGame, rightArrowGame]
+    let whichArrow = arrowList.length
 
     document.addEventListener('keydown',(game) => {
         var arrow = game.key;
