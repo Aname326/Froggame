@@ -110,6 +110,7 @@
     window.arrowLit = 0
     let arrowList = [upArrowGame, downArrowGame, leftArrowGame, rightArrowGame]
     let listLen = arrowList.length
+    var score = 0
     
 
     const dbref = ref(db)
@@ -184,13 +185,44 @@
         var arrow = game.key;
 
         if (arrow == "ArrowLeft") {
-            arrowList[randomNum(listLen)]()
-        } else if (arrow == "ArrowRight") {
-            arrowList[randomNum(listLen)]()
-        } else if (arrow == "ArrowUp") {
-            arrowList[randomNum(listLen)]()
-        } else if (arrow == "ArrowDown") {
-            arrowList[randomNum(listLen)]()
+            if (window.arrowLit == 3) {
+                score += 1
+                arrowList[randomNum(listLen)]()
+                console.log(score)
+            } else {
+                arrowList[randomNum(listLen)]()
+                console.log(score)
+            }
+        } 
+        else if (arrow == "ArrowRight") {
+            if (window.arrowLit == 4) {
+                score += 1
+                arrowList[randomNum(listLen)]()
+                console.log(score)
+            } else {
+                arrowList[randomNum(listLen)]()
+                console.log(score)
+            }
+        } 
+        else if (arrow == "ArrowUp") {
+            if (window.arrowLit == 1) {
+                score += 1
+                arrowList[randomNum(listLen)]()
+                console.log(score)
+            } else {
+                arrowList[randomNum(listLen)]()
+                console.log(score)
+            }
+        } 
+        else if (arrow == "ArrowDown") {
+            if (window.arrowLit == 2) {
+                score += 1
+                arrowList[randomNum(listLen)]()
+                console.log(score)
+            } else {
+                arrowList[randomNum(listLen)]()
+                console.log(score)
+            }
         }
         
     })
