@@ -157,6 +157,12 @@
     }
 
 
+    function startTimer() {
+        clearInterval(interval);
+        interval = setInterval(startTime, 10)
+    }
+
+
     function start() {
 
         if (idInput.value == "" | idInput.value == null) {
