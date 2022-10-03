@@ -207,8 +207,10 @@
 
     confirmID.addEventListener('click', start)
 
-    if (seconds == 30) {
-        clearInterval(interval)
+    function stopTimer() {
+        if (seconds == 30) {
+            clearInterval(interval)
+        }
     }
   
 
