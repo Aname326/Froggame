@@ -184,17 +184,13 @@
         var arrow = game.key;
 
         if (arrow == "ArrowLeft") {
-            if (window.arrowLit == 3) {
-
-            } else {
-
-            }
-        } else if (arrow == "ArrowUp") {
-
-        } else if (arrow == "ArrowDown") {
-
+            arrowList[randomNum(listLen)]()
         } else if (arrow == "ArrowRight") {
-
+            arrowList[randomNum(listLen)]()
+        } else if (arrow == "ArrowUp") {
+            arrowList[randomNum(listLen)]()
+        } else if (arrow == "ArrowDown") {
+            arrowList[randomNum(listLen)]()
         }
         
     })
