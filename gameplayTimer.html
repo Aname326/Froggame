@@ -183,6 +183,10 @@
         if (seconds > 9) {
             outputSeconds.innerHTML = seconds
         }
+
+        if (seconds == 30) {
+            clearInterval(interval)
+        }
     }
 
     function start() {
@@ -207,11 +211,6 @@
 
     confirmID.addEventListener('click', start)
 
-    function stopTimer() {
-        if (seconds == 30) {
-            clearInterval(interval)
-        }
-    }
   
 
     document.addEventListener('keydown',(game) => {
