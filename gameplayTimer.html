@@ -207,6 +207,9 @@
 
     confirmID.addEventListener('click', start)
 
+    if (seconds == 30) {
+        clearInterval(interval)
+    }
   
 
     document.addEventListener('keydown',(game) => {
