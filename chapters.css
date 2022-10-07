@@ -63,3 +63,6 @@ hr {
 }
 /* intro.html | instructions */
 
+#chapterImage {
+    border: 4px solid black;
+}
