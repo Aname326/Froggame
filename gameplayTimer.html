@@ -26,7 +26,7 @@
         <a href="menu.html" id="menupage">
             <button class="buttonreturn"></button>
         </a>
-        
+
         <h1 id="scoreShow">Score: 0</h1>
 
 
@@ -46,14 +46,16 @@
 </body>
 
 <script type="module">
+    var startReturn = 0
+
     document.addEventListener('keyup',(event) => {
         var menu = event.key;
 
 
-        if (menu == "a") {
+        if (menu == "a" && startReturn == 1) {
             open('menu.html')
         } 
-        else if (menu == "A") {
+        else if (menu == "A" && startReturn == 1) {
             open('menu.html')
         }
     })
@@ -205,6 +207,7 @@
                     var userID = idInput.value
                     arrowList[randomNum(listLen)]()
                     startTimer()
+                    startReturn = 1
                 }
             })
             
