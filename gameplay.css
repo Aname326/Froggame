@@ -87,3 +87,9 @@ body {
 #endScore {
     color: #216033;
 }
+
+#continueBtn {
+    width: 220px;
+    background-color: #3aaa5b;
+    color: white;
+}
