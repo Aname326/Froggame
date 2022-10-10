@@ -222,41 +222,25 @@
     document.addEventListener('keydown',(game) => {
         var arrow = game.key;
 
-        if (arrow == "ArrowLeft") {
-            if (window.arrowLit == 3) {
-                score += 1
-                arrowList[randomNum(listLen)]()
-                scoreShow.innerHTML = "Score: " + score
-            } else {
-                arrowList[randomNum(listLen)]()
-            }
+        if (arrow == "ArrowLeft" && window.arrowLit == 3) {
+            score += 1
+            arrowList[randomNum(listLen)]()
+            scoreShow.innerHTML = "Score: " + score
         } 
-        else if (arrow == "ArrowRight") {
-            if (window.arrowLit == 4) {
-                score += 1
-                arrowList[randomNum(listLen)]()
-                scoreShow.innerHTML = "Score: " + score
-            } else {
-                arrowList[randomNum(listLen)]()
-            }
+        else if (arrow == "ArrowRight" && window.arrowLit == 4) {
+            score += 1
+            arrowList[randomNum(listLen)]()
+            scoreShow.innerHTML = "Score: " + score
         } 
-        else if (arrow == "ArrowUp") {
-            if (window.arrowLit == 1) {
-                score += 1
-                arrowList[randomNum(listLen)]()
-                scoreShow.innerHTML = "Score: " + score
-            } else {
-                arrowList[randomNum(listLen)]()
-            }
+        else if (arrow == "ArrowUp" && window.arrowLit == 1) {
+            score += 1
+            arrowList[randomNum(listLen)]()
+            scoreShow.innerHTML = "Score: " + score
         } 
-        else if (arrow == "ArrowDown") {
-            if (window.arrowLit == 2) {
-                score += 1
-                arrowList[randomNum(listLen)]()
-                scoreShow.innerHTML = "Score: " + score
-            } else {
-                arrowList[randomNum(listLen)]()
-            }
+        else if (arrow == "ArrowDown" && window.arrowLit == 2) {
+            score += 1
+            arrowList[randomNum(listLen)]()
+            scoreShow.innerHTML = "Score: " + score
         }
         
     })
