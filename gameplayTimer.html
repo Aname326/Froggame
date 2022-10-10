@@ -43,6 +43,9 @@
         </div>
     </div>
 
+    <div id="ending">
+        <h1 id="endScore"></h1>
+    </div>
 </body>
 
 <script type="module">
@@ -115,16 +118,22 @@
     var outputSeconds = document.getElementById("seconds")
     var outputTens = document.getElementById("tens")
     var interval
+    var timeShow = document.getElementById("timeShow")
 
     // gameplay character variables
     var frog = document.getElementById("singingfrog")
     var cursedCharacter = document.getElementById("cursedcharacter")
+
+    // game ending variables
+    var endingDiv = document.getElementById("ending")
+    var endScore = document.getElementById("endScore")
     
 
     const dbref = ref(db)
 
 
     game.style.display = "none"
+    endingDiv.style.display = "none"
 
 
     function upArrowGame() {
@@ -194,7 +203,7 @@
 
         if (seconds == 0 && tens == 0) {
             clearInterval(interval)
-            alert("your score is: " + score)
+            ending()
         }
     }
 
@@ -233,6 +242,7 @@
         setTimeout(returnCharacter, 200)
     }
 
+
     document.addEventListener('keydown',(game) => {
         var arrow = game.key;
 
@@ -262,6 +272,13 @@
         }
         
     })
+
+    function ending() {
+        game.style.display = "none" 
+        timeShow.style.display = "none"
+        endingDiv.style.display = "block"
+        endScore.innerHTML = "Your score is: " + score
+    }
 </script>
 
 
