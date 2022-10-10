@@ -20,7 +20,7 @@ body {
 }
 /* shadow and pointer cursor when hover */
 
-.singingfrog {
+#singingfrog {
     width: 400px;
     animation-name: singingfrog;
     animation-duration: 2s;
@@ -31,7 +31,7 @@ body {
 }
 
 
-.cursedcharacter {
+#cursedcharacter {
     width: 400px;
     right: 30px;
     position: fixed;
