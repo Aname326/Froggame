@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1 id="timeShow">
-        <span id="seconds">00</span> : <span id="tens">00</span>
+        <span id="seconds">30</span> : <span id="tens">00</span>
     </h1>
 
 
@@ -110,7 +110,7 @@
     var scoreShow = document.getElementById("scoreShow")
 
     // timer variables
-    var seconds = 0
+    var seconds = 30
     var tens = 0
     var outputSeconds = document.getElementById("seconds")
     var outputTens = document.getElementById("tens")
@@ -171,7 +171,7 @@
     }
 
     function startTimeCount() {
-        tens++
+        tens--
 
         if (tens <= 9) {
             outputTens.innerHTML = "0" + tens
@@ -181,18 +181,18 @@
             outputTens.innerHTML = tens
         }
 
-        if (tens > 99) {
-            seconds++
-            outputSeconds.innerHTML = "0" + seconds
-            tens = 0
-            outputTens.innerHTML = "0" + tens
+        if (tens < 0) {
+            seconds--
+            outputSeconds.innerHTML = seconds
+            tens = 99
+            outputTens.innerHTML = tens
         }
 
         if (seconds > 9) {
             outputSeconds.innerHTML = seconds
         }
 
-        if (seconds == 30) {
+        if (seconds == 0 && tens == 0) {
             clearInterval(interval)
             alert("your score is: " + score)
         }
