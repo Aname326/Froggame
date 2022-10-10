@@ -221,7 +221,17 @@
 
     confirmID.addEventListener('click', start)
 
-  
+    
+    function returnCharacter() {
+        frog.src = "frog-singing-ingame.png"
+        cursedCharacter.src = "Iancursed2.png"
+    }
+
+    function characterReaction() {
+        frog.src = "frog-hit-note.png"
+        cursedCharacter.src = "cursedIanGetHit.png"
+        setTimeout(returnCharacter, 200)
+    }
 
     document.addEventListener('keydown',(game) => {
         var arrow = game.key;
@@ -230,25 +240,25 @@
             score += 1
             arrowList[randomNum(listLen)]()
             scoreShow.innerHTML = "Score: " + score
-            frog.src = "frog-hit-note.png"
+            characterReaction()
         } 
         else if (arrow == "ArrowRight" && window.arrowLit == 4) {
             score += 1
             arrowList[randomNum(listLen)]()
             scoreShow.innerHTML = "Score: " + score
-            frog.src = "frog-hit-note.png"
+            characterReaction()
         } 
         else if (arrow == "ArrowUp" && window.arrowLit == 1) {
             score += 1
             arrowList[randomNum(listLen)]()
             scoreShow.innerHTML = "Score: " + score
-            frog.src = "frog-hit-note.png"
+            characterReaction()
         } 
         else if (arrow == "ArrowDown" && window.arrowLit == 2) {
             score += 1
             arrowList[randomNum(listLen)]()
             scoreShow.innerHTML = "Score: " + score
-            frog.src = "frog-hit-note.png"
+            characterReaction()
         }
         
     })
