@@ -78,3 +78,8 @@ body {
 #timeShow {
     text-align: center;
 }
+
+#endScore {
+    text-align: center;
+    margin-top: 260px;
+}
