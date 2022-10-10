@@ -79,7 +79,11 @@ body {
     text-align: center;
 }
 
-#endScore {
+#ending {
     text-align: center;
     margin-top: 260px;
+}
+
+#endScore {
+    color: #216033;
 }

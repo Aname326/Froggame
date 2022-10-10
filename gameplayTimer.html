@@ -44,7 +44,7 @@
     </div>
 
     <div id="ending">
-        <h1 id="endScore"></h1>
+        <h1>Your score is: <span id="endScore"></span></h1>
     </div>
 </body>
 
@@ -277,7 +277,7 @@
         game.style.display = "none" 
         timeShow.style.display = "none"
         endingDiv.style.display = "block"
-        endScore.innerHTML = "Your score is: " + score
+        endScore.innerHTML = score
     }
 </script>
 
