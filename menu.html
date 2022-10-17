@@ -166,40 +166,34 @@
      
  
  
-     buttons.style.display = "none"
-     playerNameInput.style.display = "none"
+    buttons.style.display = "none"
+    playerNameInput.style.display = "none"
  
-     function create() {    
-             if (idInput.value == "" || idInput.value == null) {
-                 alert ("the input field is emptyyyy")
-                 
-             } else {
-                 buttons.style.display = "block";
-                 playerNameInput.style.display = "block";
-                 playerInput.style.display = "none";
- 
- 
-                 playerId.innerHTML = "player ID: " + idInput.value;
-                window.storeid = idInput.value;
+    function create() {    
+        if (idInput.value == "" || idInput.value == null) {
+            alert ("the input field is emptyyyy")
+            
+        } else {
+            buttons.style.display = "block";
+            playerNameInput.style.display = "block";
+            playerInput.style.display = "none";
 
-                 
-                 set(ref(db, "Users/" + idInput.value), {
-                     Name: "-",
-                     ID: idInput.value,
-                     Highscore: 0
-                 })
-                 .catch((error) => {
-                     alert(error)
-                     // allows to catch any error 
-                 });
-             }
- 
-             
- 
-         
-         
-         
-     }
+
+            playerId.innerHTML = "player ID: " + idInput.value;
+        window.storeid = idInput.value;
+
+            
+            set(ref(db, "Users/" + idInput.value), {
+                Name: "-",
+                ID: idInput.value,
+                Highscore: 0
+            })
+            .catch((error) => {
+                alert(error)
+                // allows to catch any error 
+            });
+        }  
+    }
  
      function login() {
  
