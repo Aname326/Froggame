@@ -31,9 +31,9 @@
             <button id="loginBtn">
                 login
             </button>
+
         </div>
 
-        <i><p>(Create an ID number)</p></i>
         <i><p>(Please remember your ID number as you will need it in the game)</p></i>
 
             <h2 id="playerName"></h2>
@@ -170,21 +170,12 @@
     playerNameInput.style.display = "none"
  
     function create() {
-        
+
         if (idInput.value == "" || idInput.value == null) {
             alert ("the input field is emptyyyy")
             
         } else {
-            const dbref = ref(db);
-   
-
- 
-            get(child(dbref, "Users/" + idInput.value))
-         
-            .then((snapshot) => {
-            window.storeid = idInput.value;
-
-            if (snapshot.exists()) {
+            
                 buttons.style.display = "block";
                 playerNameInput.style.display = "block";
                 playerInput.style.display = "none";
@@ -206,7 +197,7 @@
                     alert(error)
                     // allows to catch any error 
                 });
-            }
+            
 
 
             
