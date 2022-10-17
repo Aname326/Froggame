@@ -93,3 +93,8 @@ body {
     background-color: #3aaa5b;
     color: white;
 }
+
+#gameOver {
+    text-align: center;
+    font-size: 100px;
+}
