@@ -46,6 +46,7 @@
     <div id="ending">
         <h1 id="gameOver">Game Over!</h1>
         <h1>Your score is: <span id="endScore"></span></h1>
+        <h2 id="highscore"></h2>
         <br>
         <a href="chapter1pt2.html">
             <button id="continueBtn">continue</button>
@@ -132,6 +133,7 @@
     // game ending variables
     var endingDiv = document.getElementById("ending")
     var endScore = document.getElementById("endScore")
+    var highscore = document.getElementById("highscore")
     
 
     const dbref = ref(db)
@@ -287,11 +289,10 @@
                 update(ref(db, "Users/" + idInput.value), {
                     chapter1Highscore: score
                 })
-                .then(() => {
-                    console.log("new highscore!")
-                })
+
+                highscore.innerHTML = "New Highscore!: " + score
             } else {
-                console.log("old highscore L")
+                highscore.innerHTML = "Your Highscore: " + snapshot.val().chapter1Highscore
             }
         })
 
