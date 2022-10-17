@@ -186,7 +186,10 @@
             set(ref(db, "Users/" + idInput.value), {
                 Name: "-",
                 ID: idInput.value,
-                Highscore: 0
+                chapter1Highscore: 0,
+                chapter2Highscore: 0,
+                chapter3Highscore: 0,
+                chapter4Highscore: 0
             })
             .catch((error) => {
                 alert(error)
