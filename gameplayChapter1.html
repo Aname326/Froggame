@@ -278,11 +278,34 @@
         
     })
 
+    function saveScore() {
+        const dbref = ref(db);
+
+        get(child(dbref, "Users/" + idInput.value)) 
+        .then((snapshot) => {
+            if (snapshot.val().chapter1Highscore < score) {
+                update(ref(db, "Users/" + idInput.value), {
+                    chapter1Highscore: score
+                })
+                .then(() => {
+                    console.log("new highscore!")
+                })
+            } else {
+                console.log("old highscore L")
+            }
+        })
+
+        .catch((error) => {
+            alert (error)
+        })
+    }
+
     function ending() {
         game.style.display = "none" 
         timeShow.style.display = "none"
         endingDiv.style.display = "block"
         endScore.innerHTML = score
+        saveScore()
     }
 </script>
 
