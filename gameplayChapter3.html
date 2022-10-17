@@ -18,6 +18,7 @@
 
     <div id="idInputDiv">
         <h2>Please enter your user ID</h2>
+        <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The game will start immediately after you press confirm so get ready!!</h4>
         <input id="idInput">
         <button id="confirmID">confirm</button>
     </div>
@@ -46,6 +47,7 @@
     <div id="ending">
         <h1 id="gameOver">Game Over!</h1>
         <h1>Your score is: <span id="endScore"></span></h1>
+        <h2 id="highscore"></h2>
         <br>
         <a href="chapter3pt2.html">
             <button id="continueBtn">continue</button>
@@ -132,6 +134,7 @@
     // game ending variables
     var endingDiv = document.getElementById("ending")
     var endScore = document.getElementById("endScore")
+    var highscore = document.getElementById("highscore")
     
 
     const dbref = ref(db)
@@ -278,11 +281,33 @@
         
     })
 
+    function saveScore() {
+        const dbref = ref(db);
+
+        get(child(dbref, "Users/" + idInput.value)) 
+        .then((snapshot) => {
+            if (snapshot.val().chapter3Highscore < score) {
+                update(ref(db, "Users/" + idInput.value), {
+                    chapter3Highscore: score
+                })
+
+                highscore.innerHTML = "New Highscore!: " + score
+            } else {
+                highscore.innerHTML = "Your Highscore: " + snapshot.val().chapter3Highscore
+            }
+        })
+
+        .catch((error) => {
+            alert (error)
+        })
+    }
+
     function ending() {
         game.style.display = "none" 
         timeShow.style.display = "none"
         endingDiv.style.display = "block"
         endScore.innerHTML = score
+        saveScore()
     }
 </script>
 

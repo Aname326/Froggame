@@ -1,290 +1,315 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hit The Notes!</title>
-    <link rel="stylesheet" href="gameplay.css">
-    <link rel="icon" href="tabicon.jpeg">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hit The Notes!</title>
+        <link rel="stylesheet" href="gameplay.css">
+        <link rel="icon" href="tabicon.jpeg">
 
-</head>
-<body>
-    <h1 id="timeShow">
-        <span id="seconds">30</span> : <span id="tens">00</span>
-    </h1>
-
-
-    <!--return button that leads to menu page-->
-
-    <div id="idInputDiv">
-        <h2>Please enter your user ID</h2>
-        <input id="idInput">
-        <button id="confirmID">confirm</button>
-    </div>
-
-    <div id="game">
-        <a href="menu.html" id="menupage">
-            <button class="buttonreturn"></button>
-        </a>
-
-        <h1 id="scoreShow">Score: 0</h1>
+    </head>
+    <body>
+        <h1 id="timeShow">
+            <span id="seconds">30</span> : <span id="tens">00</span>
+        </h1>
 
 
-        <img src="frog-singing-ingame.png" id="singingfrog">
-        <img src="Iancursed2.png" id="cursedcharacter">
-        <!-- both characters in the right place-->
+        <!--return button that leads to menu page-->
 
-
-        <div class="arrows">
-                <img src="leftArrow.PNG" id="leftArrow">
-                <img src="upArrow.PNG" id="upArrow">
-                <img src="downArrow.PNG" id="downArrow">
-                <img src="rightArrow.PNG" id="rightArrow">
+        <div id="idInputDiv">
+            <h2>Please enter your user ID</h2>
+            <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The game will start immediately after you press confirm so get ready!!</h4>
+            <input id="idInput">
+            <button id="confirmID">confirm</button>
         </div>
-    </div>
 
-    <div id="ending">
-        <h1 id="gameOver">Game Over!</h1>
-        <h1>Your score is: <span id="endScore"></span></h1>
-        <br>
-        <a href="chapter4pt2.html">
-            <button id="continueBtn">continue</button>
-        </a>    
-    </div>
-</body>
+        <div id="game">
+            <a href="menu.html" id="menupage">
+                <button class="buttonreturn"></button>
+            </a>
 
-<script type="module">
-    var startReturn = 0
-
-    document.addEventListener('keyup',(event) => {
-        var menu = event.key;
+            <h1 id="scoreShow">Score: 0</h1>
 
 
-        if (menu == "a" && startReturn == 1) {
-            open('menu.html')
-        } 
-        else if (menu == "A" && startReturn == 1) {
-            open('menu.html')
-        }
-    })
-    // when press "a" or "A" it opens menu page in a new tab
+            <img src="frog-singing-ingame.png" id="singingfrog">
+            <img src="Iancursed2.png" id="cursedcharacter">
+            <!-- both characters in the right place-->
 
 
-    // firebase copy and paste codes for setup
+            <div class="arrows">
+                    <img src="leftArrow.PNG" id="leftArrow">
+                    <img src="upArrow.PNG" id="upArrow">
+                    <img src="downArrow.PNG" id="downArrow">
+                    <img src="rightArrow.PNG" id="rightArrow">
+            </div>
+        </div>
 
-     // Import the functions you need from the SDKs you need
-     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
-     // TODO: Add SDKs for Firebase products that you want to use
-     // https://firebase.google.com/docs/web/setup#available-libraries
- 
-     // Your web app's Firebase configuration
-     const firebaseConfig = {
-     apiKey: "AIzaSyDKvV1UJgnMr0i9VRCaIrcG_OSgmhpDAZc",
-     authDomain: "real-frog-game-2.firebaseapp.com",
-     databaseURL: "https://real-frog-game-2-default-rtdb.asia-southeast1.firebasedatabase.app",
-     projectId: "real-frog-game-2",
-     storageBucket: "real-frog-game-2.appspot.com",
-     messagingSenderId: "596703894774",
-     appId: "1:596703894774:web:754cd69024da09c1ed20d7"
-     };
- 
-     // Initialize Firebase
-     const app = initializeApp(firebaseConfig);
- 
-    import {getDatabase, set, get, update, remove, ref, child, push}
-    from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js"
- 
-    const db = getDatabase();
- 
-     // firebase setup code ends here
+        <div id="ending">
+            <h1 id="gameOver">Game Over!</h1>
+            <h1>Your score is: <span id="endScore"></span></h1>
+            <h2 id="highscore"></h2>
+            <br>
+            <a href="chapter4pt2.html">
+                <button id="continueBtn">continue</button>
+            </a>    
+        </div>
+    </body>
 
-    var game = document.getElementById("game")
+    <script type="module">
+        var startReturn = 0
 
-    // database variables
-    var confirmID = document.getElementById("confirmID")
-    var idInput = document.getElementById("idInput")
-    var idInputDiv = document.getElementById("idInputDiv")
-    var userID
+        document.addEventListener('keyup',(event) => {
+            var menu = event.key;
 
-    // arrow gameplay variables
-    var upArrow = document.getElementById("upArrow")
-    var downArrow = document.getElementById("downArrow")
-    var leftArrow = document.getElementById("leftArrow")
-    var rightArrow = document.getElementById("rightArrow")
-    window.arrowLit = 0
-    let arrowList = [upArrowGame, downArrowGame, leftArrowGame, rightArrowGame]
-    let listLen = arrowList.length
-    var score = 0
-    var scoreShow = document.getElementById("scoreShow")
 
-    // timer variables
-    var seconds = 30
-    var tens = 0
-    var outputSeconds = document.getElementById("seconds")
-    var outputTens = document.getElementById("tens")
-    var interval
-    var timeShow = document.getElementById("timeShow")
+            if (menu == "a" && startReturn == 1) {
+                open('menu.html')
+            } 
+            else if (menu == "A" && startReturn == 1) {
+                open('menu.html')
+            }
+        })
+        // when press "a" or "A" it opens menu page in a new tab
 
-    // gameplay character variables
-    var frog = document.getElementById("singingfrog")
-    var cursedCharacter = document.getElementById("cursedcharacter")
 
-    // game ending variables
-    var endingDiv = document.getElementById("ending")
-    var endScore = document.getElementById("endScore")
+        // firebase copy and paste codes for setup
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
     
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyDKvV1UJgnMr0i9VRCaIrcG_OSgmhpDAZc",
+        authDomain: "real-frog-game-2.firebaseapp.com",
+        databaseURL: "https://real-frog-game-2-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "real-frog-game-2",
+        storageBucket: "real-frog-game-2.appspot.com",
+        messagingSenderId: "596703894774",
+        appId: "1:596703894774:web:754cd69024da09c1ed20d7"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    
+        import {getDatabase, set, get, update, remove, ref, child, push}
+        from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js"
+    
+        const db = getDatabase();
+    
+        // firebase setup code ends here
 
-    const dbref = ref(db)
+        var game = document.getElementById("game")
+
+        // database variables
+        var confirmID = document.getElementById("confirmID")
+        var idInput = document.getElementById("idInput")
+        var idInputDiv = document.getElementById("idInputDiv")
+        var userID
+
+        // arrow gameplay variables
+        var upArrow = document.getElementById("upArrow")
+        var downArrow = document.getElementById("downArrow")
+        var leftArrow = document.getElementById("leftArrow")
+        var rightArrow = document.getElementById("rightArrow")
+        window.arrowLit = 0
+        let arrowList = [upArrowGame, downArrowGame, leftArrowGame, rightArrowGame]
+        let listLen = arrowList.length
+        var score = 0
+        var scoreShow = document.getElementById("scoreShow")
+
+        // timer variables
+        var seconds = 30
+        var tens = 0
+        var outputSeconds = document.getElementById("seconds")
+        var outputTens = document.getElementById("tens")
+        var interval
+        var timeShow = document.getElementById("timeShow")
+
+        // gameplay character variables
+        var frog = document.getElementById("singingfrog")
+        var cursedCharacter = document.getElementById("cursedcharacter")
+
+        // game ending variables
+        var endingDiv = document.getElementById("ending")
+        var endScore = document.getElementById("endScore")
+        var highscore = document.getElementById("highscore")
+        
+
+        const dbref = ref(db)
 
 
-    game.style.display = "none"
-    endingDiv.style.display = "none"
+        game.style.display = "none"
+        endingDiv.style.display = "none"
 
 
-    function upArrowGame() {
-        upArrow.style.boxShadow = "0px 0px 30px green";
-        downArrow.style.boxShadow = "none"
-        leftArrow.style.boxShadow = "none"
-        rightArrow.style.boxShadow = "none"
-        window.arrowLit = 1
-    }
-
-    function downArrowGame() {
-        downArrow.style.boxShadow = "0px 0px 30px green";
-        upArrow.style.boxShadow = "none"
-        leftArrow.style.boxShadow = "none"
-        rightArrow.style.boxShadow = "none"
-        window.arrowLit = 2
-    }
-
-    function leftArrowGame() {
-        leftArrow.style.boxShadow = "0px 0px 30px green";
-        downArrow.style.boxShadow = "none"
-        upArrow.style.boxShadow = "none"
-        rightArrow.style.boxShadow = "none"
-        window.arrowLit = 3
-    }
-
-    function rightArrowGame() {
-        rightArrow.style.boxShadow = "0px 0px 30px green";
-        downArrow.style.boxShadow = "none"
-        leftArrow.style.boxShadow = "none"
-        upArrow.style.boxShadow = "none"
-        window.arrowLit = 4
-    }
-
-
-    function randomNum() {
-        return Math.floor( Math.random() * 4);
-    }
-
-
-    function startTimer() {
-        clearInterval(interval);
-        interval = setInterval(startTimeCount, 10)
-    }
-
-    function startTimeCount() {
-        tens--
-
-        if (tens <= 9) {
-            outputTens.innerHTML = "0" + tens
+        function upArrowGame() {
+            upArrow.style.boxShadow = "0px 0px 30px green";
+            downArrow.style.boxShadow = "none"
+            leftArrow.style.boxShadow = "none"
+            rightArrow.style.boxShadow = "none"
+            window.arrowLit = 1
         }
 
-        if (tens > 9) {
-            outputTens.innerHTML = tens
+        function downArrowGame() {
+            downArrow.style.boxShadow = "0px 0px 30px green";
+            upArrow.style.boxShadow = "none"
+            leftArrow.style.boxShadow = "none"
+            rightArrow.style.boxShadow = "none"
+            window.arrowLit = 2
         }
 
-        if (tens < 0) {
-            seconds--
-            outputSeconds.innerHTML = seconds
-            tens = 99
-            outputTens.innerHTML = tens
+        function leftArrowGame() {
+            leftArrow.style.boxShadow = "0px 0px 30px green";
+            downArrow.style.boxShadow = "none"
+            upArrow.style.boxShadow = "none"
+            rightArrow.style.boxShadow = "none"
+            window.arrowLit = 3
         }
 
-        if (seconds > 9) {
-            outputSeconds.innerHTML = seconds
+        function rightArrowGame() {
+            rightArrow.style.boxShadow = "0px 0px 30px green";
+            downArrow.style.boxShadow = "none"
+            leftArrow.style.boxShadow = "none"
+            upArrow.style.boxShadow = "none"
+            window.arrowLit = 4
         }
 
-        if (seconds == 0 && tens == 0) {
-            clearInterval(interval)
-            ending()
+
+        function randomNum() {
+            return Math.floor( Math.random() * 4);
         }
-    }
 
-    function start() {
 
-        if (idInput.value == "" | idInput.value == null) {
-            alert("Please enter your user ID")
-        } else {
-            get(child(dbref, "Users/" + idInput.value))
-            .then((snapshot) => {
-                if (snapshot.exists()) {
-                    game.style.display = "block"
-                    idInputDiv.style.display = "none"
-                    var userID = idInput.value
-                    arrowList[randomNum(listLen)]()
-                    startTimer()
-                    startReturn = 1
-                }
-            })
+        function startTimer() {
+            clearInterval(interval);
+            interval = setInterval(startTimeCount, 10)
+        }
+
+        function startTimeCount() {
+            tens--
+
+            if (tens <= 9) {
+                outputTens.innerHTML = "0" + tens
+            }
+
+            if (tens > 9) {
+                outputTens.innerHTML = tens
+            }
+
+            if (tens < 0) {
+                seconds--
+                outputSeconds.innerHTML = seconds
+                tens = 99
+                outputTens.innerHTML = tens
+            }
+
+            if (seconds > 9) {
+                outputSeconds.innerHTML = seconds
+            }
+
+            if (seconds == 0 && tens == 0) {
+                clearInterval(interval)
+                ending()
+            }
+        }
+
+        function start() {
+
+            if (idInput.value == "" | idInput.value == null) {
+                alert("Please enter your user ID")
+            } else {
+                get(child(dbref, "Users/" + idInput.value))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        game.style.display = "block"
+                        idInputDiv.style.display = "none"
+                        var userID = idInput.value
+                        arrowList[randomNum(listLen)]()
+                        startTimer()
+                        startReturn = 1
+                    }
+                })
+                
+            }
             
         }
+
+        confirmID.addEventListener('click', start)
+
         
-    }
-
-    confirmID.addEventListener('click', start)
-
-    
-    function returnCharacter() {
-        frog.src = "frog-singing-ingame.png"
-        cursedCharacter.src = "Iancursed2.png"
-    }
-
-    function characterReaction() {
-        frog.src = "frog-hit-note.png"
-        cursedCharacter.src = "cursedIanGetHit.png"
-        setTimeout(returnCharacter, 200)
-    }
-
-
-    document.addEventListener('keydown',(game) => {
-        var arrow = game.key;
-
-        if (arrow == "ArrowLeft" && window.arrowLit == 3) {
-            score += 1
-            arrowList[randomNum(listLen)]()
-            scoreShow.innerHTML = "Score: " + score
-            characterReaction()
-        } 
-        else if (arrow == "ArrowRight" && window.arrowLit == 4) {
-            score += 1
-            arrowList[randomNum(listLen)]()
-            scoreShow.innerHTML = "Score: " + score
-            characterReaction()
-        } 
-        else if (arrow == "ArrowUp" && window.arrowLit == 1) {
-            score += 1
-            arrowList[randomNum(listLen)]()
-            scoreShow.innerHTML = "Score: " + score
-            characterReaction()
-        } 
-        else if (arrow == "ArrowDown" && window.arrowLit == 2) {
-            score += 1
-            arrowList[randomNum(listLen)]()
-            scoreShow.innerHTML = "Score: " + score
-            characterReaction()
+        function returnCharacter() {
+            frog.src = "frog-singing-ingame.png"
+            cursedCharacter.src = "Iancursed2.png"
         }
-        
-    })
 
-    function ending() {
-        game.style.display = "none" 
-        timeShow.style.display = "none"
-        endingDiv.style.display = "block"
-        endScore.innerHTML = score
-    }
-</script>
+        function characterReaction() {
+            frog.src = "frog-hit-note.png"
+            cursedCharacter.src = "cursedIanGetHit.png"
+            setTimeout(returnCharacter, 200)
+        }
+
+
+        document.addEventListener('keydown',(game) => {
+            var arrow = game.key;
+
+            if (arrow == "ArrowLeft" && window.arrowLit == 3) {
+                score += 1
+                arrowList[randomNum(listLen)]()
+                scoreShow.innerHTML = "Score: " + score
+                characterReaction()
+            } 
+            else if (arrow == "ArrowRight" && window.arrowLit == 4) {
+                score += 1
+                arrowList[randomNum(listLen)]()
+                scoreShow.innerHTML = "Score: " + score
+                characterReaction()
+            } 
+            else if (arrow == "ArrowUp" && window.arrowLit == 1) {
+                score += 1
+                arrowList[randomNum(listLen)]()
+                scoreShow.innerHTML = "Score: " + score
+                characterReaction()
+            } 
+            else if (arrow == "ArrowDown" && window.arrowLit == 2) {
+                score += 1
+                arrowList[randomNum(listLen)]()
+                scoreShow.innerHTML = "Score: " + score
+                characterReaction()
+            }
+            
+        })
+
+        function saveScore() {
+            const dbref = ref(db);
+
+            get(child(dbref, "Users/" + idInput.value)) 
+            .then((snapshot) => {
+                if (snapshot.val().chapter4Highscore < score) {
+                    update(ref(db, "Users/" + idInput.value), {
+                        chapter4Highscore: score
+                    })
+
+                    highscore.innerHTML = "New Highscore!: " + score
+                } else {
+                    highscore.innerHTML = "Your Highscore: " + snapshot.val().chapter4Highscore
+                }
+            })
+
+            .catch((error) => {
+                alert (error)
+            })
+        }
+
+        function ending() {
+            game.style.display = "none" 
+            timeShow.style.display = "none"
+            endingDiv.style.display = "block"
+            endScore.innerHTML = score
+            saveScore()
+        }
+    </script>
 
 
 </html>
