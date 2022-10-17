@@ -63,7 +63,7 @@
         <br> <br>
 
         <a href="chapter1.html">
-            <button class="chapter1">
+            <button id="chapter1">
                 
         </button>
         </a>
@@ -72,7 +72,7 @@
 
   
         <a href="chapter2.html">
-            <button class="chapter2">
+            <button id="chapter2">
 
             </button>
         </a>
@@ -81,7 +81,7 @@
 
 
         <a href="chapter3.html">
-            <button class="chapter3">
+            <button id="chapter3">
                 
             </button>
         </a>
@@ -90,7 +90,7 @@
         <br><br>
 
         <a href="chapter4.html">
-        <button class="chapter4">
+        <button id="chapter4">
 
         </button>
         </a>
@@ -162,10 +162,10 @@
      var createName = document.getElementById("createName");
      var nameInput = document.getElementById("nameInput");
      
-     var chapter1Btn = document.getElementsByClassName("chapter1")
-     var chapter2Btn = document.getElementsByClassName("chapter2")
-     var chapter3Btn = document.getElementsByClassName("chapter3")
-     var chapter4Btn = document.getElementsByClassName("chapter4")
+     var chapter1Btn = document.getElementById("chapter1")
+     var chapter2Btn = document.getElementById("chapter2")
+     var chapter3Btn = document.getElementById("chapter3")
+     var chapter4Btn = document.getElementById("chapter4")
 
      
  
@@ -184,7 +184,9 @@
                 playerNameInput.style.display = "block";
                 playerInput.style.display = "none";
 
-
+                chapter2Btn.disabled = true;
+                chapter3Btn.disabled = true;
+                chapter4Btn.disabled = true;
 
                 playerId.innerHTML = "player ID: " + idInput.value;
                 window.storeid = idInput.value;
