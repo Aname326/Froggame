@@ -248,6 +248,20 @@
                     buttons.style.display = "block";
                     playerInput.style.display = "none";
                 }
+
+                if (snapshot.val().chapter1Highscore == "") {
+                    chapter2Btn.disabled = true;
+                    chapter3Btn.disabled = true;
+                    chapter4Btn.disabled = true;
+
+                    chapter2Btn.style.opacity = 0.5;
+                    chapter3Btn.style.opacity = 0.5;
+                    chapter4Btn.style.opacity = 0.5;
+
+                    chapter2Btn.style.cursor = "not-allowed";
+                    chapter3Btn.style.cursor = "not-allowed";
+                    chapter4Btn.style.cursor = "not-allowed";
+                }
                 
             } else {
                 alert("data not found");
