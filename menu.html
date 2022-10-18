@@ -246,7 +246,7 @@
         .then((snapshot) => {
             window.storeid = idInput.value;
 
-            if (snapshot.exists()) {
+            if (snapshot.exists() && pwInput.value == snapshot.val().password) {
                 if (snapshot.val().Name == "-") {
                     playerId.innerHTML = "player ID: " + snapshot.val().ID;
                     buttons.style.display = "block";
