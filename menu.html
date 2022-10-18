@@ -273,6 +273,14 @@
                     chapter3Btn.style.cursor = "not-allowed";
                     chapter4Btn.style.cursor = "not-allowed";
                 }
+
+                if (snapshot.val().chapter3Highscore == "") {
+                    chapter4Btn.disabled = true;
+
+                    chapter4Btn.style.opacity = 0.5;
+
+                    chapter4Btn.style.cursor = "not-allowed";
+                }
                 
             } else {
                 alert("data not found");
