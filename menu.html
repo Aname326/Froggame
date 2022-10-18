@@ -188,48 +188,59 @@
             alert ("yo type somthing in")
             
         } else {
+            const dbref = ref(db);
+   
+
+ 
+            get(child(dbref, "Users/" + idInput.value))
             
-                buttons.style.display = "block";
-                playerNameInput.style.display = "block";
-                playerInput.style.display = "none";
-
-                chapter2Btn.disabled = true;
-                chapter3Btn.disabled = true;
-                chapter4Btn.disabled = true;
-
-                chapter2Btn.style.opacity = 0.5;
-                chapter3Btn.style.opacity = 0.5;
-                chapter4Btn.style.opacity = 0.5;
-
-                chapter2Btn.style.cursor = "not-allowed";
-                chapter3Btn.style.cursor = "not-allowed";
-                chapter4Btn.style.cursor = "not-allowed";
-
-
-                playerId.innerHTML = "player ID: " + idInput.value;
+            .then((snapshot) => {
                 window.storeid = idInput.value;
+                if (snapshot.exists()) {
+                    alert("ID already exists, please choose another one")
+                } else {
+                    buttons.style.display = "block";
+                    playerNameInput.style.display = "block";
+                    playerInput.style.display = "none";
 
-                
-                set(ref(db, "Users/" + idInput.value), {
-                    Name: "-",
-                    password: pwInput.value,
-                    ID: idInput.value,
-                    chapter1Highscore: "",
-                    chapter2Highscore: "",
-                    chapter3Highscore: "",
-                    chapter4Highscore: ""
-                })
-                .catch((error) => {
-                    alert(error)
-                    // allows to catch any error 
-                });
+                    chapter2Btn.disabled = true;
+                    chapter3Btn.disabled = true;
+                    chapter4Btn.disabled = true;
+
+                    chapter2Btn.style.opacity = 0.5;
+                    chapter3Btn.style.opacity = 0.5;
+                    chapter4Btn.style.opacity = 0.5;
+
+                    chapter2Btn.style.cursor = "not-allowed";
+                    chapter3Btn.style.cursor = "not-allowed";
+                    chapter4Btn.style.cursor = "not-allowed";
+
+
+                    playerId.innerHTML = "player ID: " + idInput.value;
+                    window.storeid = idInput.value;
+
+                    
+                    set(ref(db, "Users/" + idInput.value), {
+                        Name: "-",
+                        password: pwInput.value,
+                        ID: idInput.value,
+                        chapter1Highscore: "",
+                        chapter2Highscore: "",
+                        chapter3Highscore: "",
+                        chapter4Highscore: ""
+                    })
+                    .catch((error) => {
+                        alert(error)
+                        // allows to catch any error 
+                    });
+                }
+            }
+
+
             
 
 
-            
-
-
-        }
+            )}
     } 
  
 
