@@ -17,9 +17,10 @@
     <!--return button that leads to menu page-->
 
     <div id="idInputDiv">
-        <h2>Please enter your user ID</h2>
+        <h2>Please enter your user ID and password</h2>
         <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The game will start immediately after you press confirm so get ready!!</h4>
         <input id="idInput">
+        <input id="pwInput" type="password" placeholder="password">
         <button id="confirmID">confirm</button>
     </div>
 
@@ -107,6 +108,7 @@
     var idInput = document.getElementById("idInput")
     var idInputDiv = document.getElementById("idInputDiv")
     var userID
+    var pwInput = document.getElementById("pwInput")
 
     // arrow gameplay variables
     var upArrow = document.getElementById("upArrow")
@@ -217,18 +219,20 @@
 
     function start() {
 
-        if (idInput.value == "" | idInput.value == null) {
+        if (idInput.value == "" | idInput.value == null || pwInput.value == "" || pwInput.value == null) {
             alert("Please enter your user ID")
         } else {
             get(child(dbref, "Users/" + idInput.value))
             .then((snapshot) => {
-                if (snapshot.exists()) {
+                if (snapshot.exists() && pwInput.value == snapshot.val().password) {
                     game.style.display = "block"
                     idInputDiv.style.display = "none"
                     var userID = idInput.value
                     arrowList[randomNum(listLen)]()
                     startTimer()
                     startReturn = 1
+                } else {
+                    alert("either your ID or password is wrong. Big L.")
                 }
             })
             
