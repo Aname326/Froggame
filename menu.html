@@ -262,6 +262,17 @@
                     chapter3Btn.style.cursor = "not-allowed";
                     chapter4Btn.style.cursor = "not-allowed";
                 }
+
+                if (snapshot.val().chapter2Highscore == "") {
+                    chapter3Btn.disabled = true;
+                    chapter4Btn.disabled = true;
+
+                    chapter3Btn.style.opacity = 0.5;
+                    chapter4Btn.style.opacity = 0.5;
+
+                    chapter3Btn.style.cursor = "not-allowed";
+                    chapter4Btn.style.cursor = "not-allowed";
+                }
                 
             } else {
                 alert("data not found");
