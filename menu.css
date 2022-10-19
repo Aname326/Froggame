@@ -30,11 +30,6 @@ body {
   transform: scale(.95);
 }
 
-#chapter4:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
-  transform: scale(.95);
-}
-
 .intro {
   background: url(introduction.jpeg);
   background-size: cover;
@@ -88,6 +83,8 @@ body {
   border-radius: 15px;
   height: 240px;
   width: 1010px;
+  font-size: 89;
+  color: white;
 }
 
 .credits {

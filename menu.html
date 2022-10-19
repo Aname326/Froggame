@@ -96,8 +96,8 @@
         <br><br>
 
         <a href="chapter4.html">
-        <button id="chapter4">
-
+        <button id="chapter4" style="opacity: 0.5; cursor: not-allowed;" disabled>
+            TO BE CONTINUED...
         </button>
         </a>
 
@@ -181,6 +181,7 @@
  
     buttons.style.display = "none"
     playerNameInput.style.display = "none"
+    
  
     function create() {
 
@@ -205,11 +206,11 @@
 
                     chapter2Btn.disabled = true;
                     chapter3Btn.disabled = true;
-                    chapter4Btn.disabled = true;
+
 
                     chapter2Btn.style.opacity = 0.5;
                     chapter3Btn.style.opacity = 0.5;
-                    chapter4Btn.style.opacity = 0.5;
+
 
                     chapter2Btn.style.cursor = "not-allowed";
                     chapter3Btn.style.cursor = "not-allowed";
