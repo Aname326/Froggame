@@ -12,14 +12,3 @@ document.addEventListener('keyup',(event) => {
 // when press "a" or "A" it opens menu page in a new tab
 
 
-var confirm = document.querySelector("#confirm")
-var string = document.querySelector("#try")
-var instruction = document.getElementById("instructions")
-
-instruction.style.display = "none"
-// instructions doesn't show at the start
-
-function instructions() {
-    instruction.style.display = "block"
-}
-// onclick show instructions
