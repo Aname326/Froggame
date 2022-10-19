@@ -75,3 +75,18 @@ hr {
 #instructionImg {
     width: 1090px;
 }
+
+#nextBtn {
+    height: 74px;
+    width: 212px;
+    background-color: #5fe884;
+    border-color: darkgreen;
+    color: #d1ffdd;
+    font-size: 36px;
+}
+
+#nextBtn:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+    transform: scale(.95);
+    cursor: pointer;;
+}
