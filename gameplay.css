@@ -31,11 +31,18 @@ body {
 }
 
 
-#cursedcharacter {
+#cursedian {
     width: 400px;
     right: 30px;
     position: fixed;
     bottom: 50px;
+}
+
+#cursedcharleen {
+    width: 500px;
+    right: 30px;
+    position: fixed;
+    bottom: 20px;
 }
 
 #leftArrow {
