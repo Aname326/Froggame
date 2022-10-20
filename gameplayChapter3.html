@@ -17,9 +17,9 @@
     <!--return button that leads to menu page-->
 
     <div id="idInputDiv">
-        <h2>Please enter your user ID</h2>
+        <h2>Please enter your user ID and password</h2>
         <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The game will start immediately after you press confirm so get ready!!</h4>
-        <input id="idInput">
+        <input id="idInput" placeholder="ID">
         <input id="pwInput" type="password" placeholder="password">
         <button id="confirmID">confirm</button>
     </div>
@@ -33,7 +33,7 @@
 
 
         <img src="frog-singing-ingame.png" id="singingfrog">
-        <img src="Iancursed2.png" id="cursedcharacter">
+        <img src="max-ingame.png" id="cursedmax">
         <!-- both characters in the right place-->
 
 
@@ -131,7 +131,7 @@
 
     // gameplay character variables
     var frog = document.getElementById("singingfrog")
-    var cursedCharacter = document.getElementById("cursedcharacter")
+    var cursedCharacter = document.getElementById("cursedmax")
 
     // game ending variables
     var endingDiv = document.getElementById("ending")
@@ -220,7 +220,7 @@
     function start() {
 
         if (idInput.value == "" | idInput.value == null || pwInput.value == "" || pwInput.value == null) {
-            alert("Please enter your user ID")
+            alert("Please type something in")
         } else {
             get(child(dbref, "Users/" + idInput.value))
             .then((snapshot) => {
@@ -245,12 +245,12 @@
     
     function returnCharacter() {
         frog.src = "frog-singing-ingame.png"
-        cursedCharacter.src = "Iancursed2.png"
+        cursedCharacter.src = "max-ingame.png"
     }
 
     function characterReaction() {
         frog.src = "frog-hit-note.png"
-        cursedCharacter.src = "cursedIanGetHit.png"
+        cursedCharacter.src = "max-gethit.png"
         setTimeout(returnCharacter, 200)
     }
 

@@ -19,7 +19,7 @@
     <div id="idInputDiv">
         <h2>Please enter your user ID and password</h2>
         <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The game will start immediately after you press confirm so get ready!!</h4>
-        <input id="idInput">
+        <input id="idInput" placeholder="ID">
         <input id="pwInput" type="password" placeholder="password">
         <button id="confirmID">confirm</button>
     </div>
@@ -131,7 +131,7 @@
 
     // gameplay character variables
     var frog = document.getElementById("singingfrog")
-    var cursedCharacter = document.getElementById("cursedcharacter")
+    var cursedCharacter = document.getElementById("cursedcharleen")
 
     // game ending variables
     var endingDiv = document.getElementById("ending")
@@ -220,7 +220,7 @@
     function start() {
 
         if (idInput.value == "" | idInput.value == null || pwInput.value == "" || pwInput.value == null) {
-            alert("Please enter your user ID")
+            alert("Please type something in")
         } else {
             get(child(dbref, "Users/" + idInput.value))
             .then((snapshot) => {
