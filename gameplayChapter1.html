@@ -304,13 +304,14 @@
         .catch((error) => {
             alert (error)
         })
+
+        endScore.innerHTML = score;
     }
 
     function ending() {
         game.style.display = "none" 
         timeShow.style.display = "none"
         endingDiv.style.display = "block"
-        endScore.innerHTML = score
         saveScore()
     }
 </script>
