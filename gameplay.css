@@ -45,6 +45,13 @@ body {
     bottom: 20px;
 }
 
+#cursedmax {
+    width: 500px;
+    right: 30px;
+    position: fixed;
+    bottom: 20px;
+}
+
 #leftArrow {
     width: 150px;
     left: 456px;
