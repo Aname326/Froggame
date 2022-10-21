@@ -187,6 +187,7 @@
      var chapter4Btn = document.getElementById("chapter4")
 
      // highscore display variables
+     var highscore = document.getElementById("highscore")
      var highscore1 = document.getElementById("highscore1")
      var highscore2 = document.getElementById("highscore2")
      var highscore3 = document.getElementById("highscore3")
@@ -194,6 +195,7 @@
  
     buttons.style.display = "none"
     playerNameInput.style.display = "none"
+    highscore.style.display = "none"
     
  
     function create() {
@@ -261,6 +263,7 @@
 
      function login() {
  
+        highscore.style.display = "block"
  
          const dbref = ref(db);
    
@@ -272,6 +275,7 @@
             window.storeid = idInput.value;
 
             if (snapshot.exists() && pwInput.value == snapshot.val().password) {
+                // player name codes
                 if (snapshot.val().Name == "-") {
                     playerId.innerHTML = "player ID: " + snapshot.val().ID;
                     buttons.style.display = "block";
@@ -284,6 +288,7 @@
                     playerInput.style.display = "none";
                 }
 
+                // showing button codes
                 if (snapshot.val().chapter1Highscore == "") {
                     chapter2Btn.disabled = true;
                     chapter3Btn.disabled = true;
@@ -315,6 +320,17 @@
                     chapter4Btn.style.opacity = 0.5;
 
                     chapter4Btn.style.cursor = "not-allowed";
+                }
+
+                // highscore codes
+                if (snapshot.val().chapter1Highscore != "") {
+                    highscore1.innerHTML = "Chapter 1: " + snapshot.val().chapter1Highscore
+                }
+                if (snapshot.val().chapter2Highscore != "") {
+                    highscore2.innerHTML = "Chapter 2: " + snapshot.val().chapter2Highscore
+                }
+                if (snapshot.val().chapter3Highscore != "") {
+                    highscore3.innerHTML = "Chapter 3: " + snapshot.val().chapter3Highscore
                 }
                 
             } else {
